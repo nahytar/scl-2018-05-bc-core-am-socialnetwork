@@ -1,0 +1,22 @@
+{
+  "name": "proyecto3_red_social",
+  "version": "1.0.0",
+  "description": "Es una red social para facilitar la comunicacion entre apoderados y profesores",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nahytar/proyecto3_red_social.git"
+  },
+  "author": "Mayra, Leslie, Marcela",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nahytar/proyecto3_red_social/issues"
+  },
+  "homepage": "https://github.com/nahytar/proyecto3_red_social#readme",
+  "dependencies": {
+    "jest": "^23.2.0"
+  }
+}
