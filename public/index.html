@@ -20,9 +20,14 @@
 </head>
 
 <body>
+ <div id="contenedorimg">
+   <img src="img/img002.png" alt="logo">
+
+ </div>
+   
+  <div id ="contenedoresfire"> 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-
       try {
         let app = firebase.app();
         var uiConfig = {
@@ -55,6 +60,7 @@
       }
     });
   </script>
+  </div>
 
   <div id="firebaseui-auth-container"></div>
   <div id="userData"></div>
