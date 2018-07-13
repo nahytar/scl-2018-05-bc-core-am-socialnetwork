@@ -46,6 +46,7 @@
   <script src="js/chat.js">  </script>
   <script src="js/user.js">  </script>
   <script src="js/main.js">  </script>
+  <script src="js/window.js"></script>
 
   <div id="firebaseui-auth-container"></div>
   <div id="userData"></div>
@@ -68,14 +69,18 @@
 
   <!-- ===================================chat========================================= -->
 
-  <div id="chatArea" class="chatArea" style="display: none;">
-   <div id="chatScreen"></div>
-   <input type="text" id="chatImput">
-   <div id="chatUsers"></div>
+  <div id="chatt">
+    <div id ="fondomensajes">
+    <div id="messageContainer"></div>
+  </div>
+  <div id="mensajes">
+    <input id="messageArea"type="text" placeholder="Mensaje" maxlength = "50" size="100">
+    <input type="button" id="sendButton" value="Enviar" onclick="sendMessage()">
+  </div>
   </div>
 <!-- ======================================Post============================================ -->
 
-<div id="postArea" class="postArea" style="display: none">
+<div id="postArea" class="postArea" >
   <div id="postScreen"></div>
   <input type="text" id="postImput">
 </div>

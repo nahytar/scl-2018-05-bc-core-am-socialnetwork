@@ -1,49 +1,37 @@
-let userDb = null;
-
-const porcessChatInput = (event) => {
-  // se le da por defecto el valor true a istyping
-  let istyping = true;
-  if (event.key === "Enter") {
-    istyping = false;
-    event.preventDefault();
-    firebase.database().ref('/messages').push({
-      name: firebase.auth().currentUser.displayName,
-      message: event.currentTarget.value,
-      time: Date.now()
-    })
-    event.currentTarget.value = "";
-  }
-  // actualiza estado del usuario
-  saveChatStatus(istyping);
-}
-
-const drawChats = (snapshot) => {
-  document.getElementById('chatArea').style.display = "block";
-  let chats = "";
-  Object.values(snapshot.val()).forEach((message) => {
-    const time = new Date(message.time);
-    chats += `<p>${time.getMonth()+1}/${time.getDate()} ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()} ${message.name} ${message.message}</p>`;
-  });
-  document.getElementById('chatScreen').innerHTML = chats;
-}
-
-const drawChatUsers = (snapshot) => {
-  let users = "";
-  Object.values(snapshot.val()).forEach((user) => {
-    const time = new Date(user.lastAction);
-    users += `<p>${time.getMonth()}/${time.getDate()} ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()} ${user.name} ${user.istyping ? 'escribiendo' : ''}</p>`;
-  });
-  document.getElementById('chatUsers').innerHTML = users;
-}
-
-const saveChatStatus = (istyping) => {
-  const user = firebase.auth().currentUser;
-  if (!userDb) {
-    userDb = firebase.database().ref('/chatUsers/' + user.uid);
-  }
-  userDb.update({
-    lastAction: Date.now(),
-    name: user.displayName,
-    istyping: istyping
+function chat(){
+  firebase.database().ref('messages')
+  .limitToLast(5) // filtro
+  .once('value')
+  .then((messages)=> {
+  console.log('mensajes > '+JSON.stringify(messages));
   })
-}
+  .catch(()=>{
+  
+  });
+  
+  //aca comenzamos a escuchar por nuevos mensajes usando el evento on child_added
+  firebase.database().ref('messages')
+  .limitToLast(5)
+  .on('child_added', (newMessage)=> {
+   let date = new Date();
+  messageContainer.innerHTML += `
+  <p> ${newMessage.val().creatorName}
+  (${date.getDate(newMessage.val())} / ${date.getMonth(newMessage.val())+1} - ${date.getHours(newMessage.val())}:${date.getMinutes(newMessage.val())}) : ${newMessage.val().text}</p>`;
+  });
+  };
+  
+  function sendMessage(){
+  const currentUser = firebase.auth().currentUser;
+  const messageAreaText = messageArea.value
+  messageArea.value +='';
+  
+  const newMessageKey = firebase.database().ref().child(`messages`).push().key;
+  
+  firebase.database().ref(`messages/${newMessageKey}`).set({
+  creator : currentUser.uid,
+  creatorName : currentUser.displayName || currentUser.email,
+  text : messageAreaText,
+  fecha: firebase.database.ServerValue.TIMESTAMP
+  });
+  }
+  
