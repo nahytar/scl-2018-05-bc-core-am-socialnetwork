@@ -16,7 +16,7 @@ const porcessChatInput = (event) => {
   // actualiza estado del usuario
   saveChatStatus(istyping);
 }
-
+// dibuja el chat
 const drawChats = (snapshot) => {
   document.getElementById('chatArea').style.display = "block";
   let chats = "";
@@ -26,7 +26,7 @@ const drawChats = (snapshot) => {
   });
   document.getElementById('chatScreen').innerHTML = chats;
 }
-
+// dibuja los usuarios del chat
 const drawChatUsers = (snapshot) => {
   let users = "";
   Object.values(snapshot.val()).forEach((user) => {
@@ -35,7 +35,7 @@ const drawChatUsers = (snapshot) => {
   });
   document.getElementById('chatUsers').innerHTML = users;
 }
-
+// guarda el estado del usuario del chat
 const saveChatStatus = (istyping) => {
   const user = firebase.auth().currentUser;
   if (!userDb) {
