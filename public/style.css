@@ -1,8 +1,8 @@
 /* Estilos de loguin*/
-.container{
+.container, .rowone, .rowtwo, .rowthree, .rowfour{
   text-align: center;
 }
-.rowone{
+/*.rowone{
   text-align: center;
 }
 .rowtwo{
@@ -13,4 +13,9 @@
 }
 .rowfour{
   text-align: center;
+}*/
+#pinguinodesplazamiento{
+  position: relative;
+  margin-top: 50%;
+
 }
