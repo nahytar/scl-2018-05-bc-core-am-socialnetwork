@@ -28,54 +28,9 @@
 </head>
 
 <body>
-  <!--creacion de login con restricciones de boostrap-->
-  <div class="container">
-    <form class="form-horizontal" role="form" method="POST" action="/login">
-        <div class="rowone">
-            <div class="col-md-4"></div>
-                <!--aqui debe ir la img-->
-                <img src="../public/img/img003.png" alt="logo">
-                <h1>Hola</h1>
-            </div>
-        </div>
-    </form>
-</div> 
-  <div id ="contenedoresfire"> 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      try {
-        let app = firebase.app();
-        var uiConfig = {
-          signInSuccessUrl: '/',
-          signInOptions: [
-            // Leave the lines as is for the providers you want to offer your users.
-            firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-            firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-            firebase.auth.EmailAuthProvider.PROVIDER_ID,
-          ],
-          // Terms of service url.
-          tosUrl: '/'
-        };
-
-        firebase.auth().onAuthStateChanged((user) => {
-          if (user) {
-            console.log(user)
-            document.getElementById('userData').innerHTML = user.displayName + ' <a href="#" onclick="firebase.auth().signOut()">Sign out</a>';
-          } else {
-            document.getElementById('userData').innerHTML = '';
-            // Initialize the FirebaseUI Widget using Firebase.
-            var ui = new firebaseui.auth.AuthUI(firebase.auth());
-            // The start method will wait until the DOM is loaded.
-            ui.start('#firebaseui-auth-container', uiConfig);
-          }
-        });
-
-      } catch (e) {
-        console.error(e);
-      }
-    });
-  </script>
-  </div>
+  <script src="js/login.js">  </script>
+  <script src="js/chat.js">  </script>
+  <script src="js/user.js">  </script>
   <script src="js/main.js">  </script>
 
   <div id="firebaseui-auth-container"></div>
@@ -83,7 +38,7 @@
 
   <!-- ===================================chat========================================= -->
 
-  <div id="chatArea" class="chatArea" style="display: none">
+  <div id="chatArea" class="chatArea" style="display: none;">
    <div id="chatScreen"></div>
    <input type="text" id="chatImput">
    <div id="chatUsers"></div>
