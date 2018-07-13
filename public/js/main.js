@@ -1,26 +1,37 @@
 document.addEventListener('DOMContentLoaded', function () {
   try {
-    let app = firebase.app();
-
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        saveChatStatus(false);
-
-        firebase.database().ref('/chatUsers').on('value', drawChatUsers);
-        drawUserData();
-      } else {
-        drawLogin();
-      }
-    });
-
+  let app = firebase.app();
+  var uiConfig = {
+  signInSuccessUrl: '/',
+  signInOptions: [
+  // Leave the lines as is for the providers you want to offer your users.
+  firebase.auth.EmailAuthProvider.PROVIDER_ID,
+  firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+  firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+  
+  ],
+  // Terms of service url.
+  tosUrl: '/'
+  };
+  let ui = new firebaseui.auth.AuthUI(firebase.auth());
+  
+  firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+  document.getElementById("chatt").style.display = "block";
+  document.getElementById("postImput").style.display = "none";
+  document.getElementById('userData').innerHTML = 'Apoderada/o: ' + user.displayName + ' <a href="#" onclick="firebase.auth().signOut()">Sign out</a>';
+  } else {
+  document.getElementById("chatt").style.display = "none";
+  document.getElementById("postImput").style.display = "none";
+  document.getElementById('userData').innerHTML = '';
+  // Initialize the FirebaseUI Widget using Firebase.
+  // The start method will wait until the DOM is loaded.
+  ui.start('#firebaseui-auth-container', uiConfig);
+  }
+  });
+  
   } catch (e) {
-    console.error(e);
+  console.error(e);
   }
   
-  // se obtiene el elemento chatIMput y se le agrega el evento keypress
-  document.getElementById('chatImput').addEventListener('keypress', porcessChatInput);
-
-  // suscribe el dibujado de los mensajes al evento de actualizacion de la coleccion de mensajes de la base de datos
-  firebase.database().ref('/messages').on('value', drawChats)
-
-});
+  });
