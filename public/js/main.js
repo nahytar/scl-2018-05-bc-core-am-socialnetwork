@@ -1,37 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
+  hideAll();
   try {
-  let app = firebase.app();
-  var uiConfig = {
-  signInSuccessUrl: '/',
-  signInOptions: [
-  // Leave the lines as is for the providers you want to offer your users.
-  firebase.auth.EmailAuthProvider.PROVIDER_ID,
-  firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-  firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-  
-  ],
-  // Terms of service url.
-  tosUrl: '/'
-  };
-  let ui = new firebaseui.auth.AuthUI(firebase.auth());
-  
-  firebase.auth().onAuthStateChanged((user) => {
-  if (user) {
-  document.getElementById("chatt").style.display = "block";
-  document.getElementById("postImput").style.display = "none";
-  document.getElementById('userData').innerHTML = 'Apoderada/o: ' + user.displayName + ' <a href="#" onclick="firebase.auth().signOut()">Sign out</a>';
-  } else {
-  document.getElementById("chatt").style.display = "none";
-  document.getElementById("postImput").style.display = "none";
-  document.getElementById('userData').innerHTML = '';
-  // Initialize the FirebaseUI Widget using Firebase.
-  // The start method will wait until the DOM is loaded.
-  ui.start('#firebaseui-auth-container', uiConfig);
-  }
-  });
-  
+    let app = firebase.app();
+
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        document.getElementById('menuArea').style.display = 'block';
+        drawUserData();
+        saveChatStatus(false);
+      } else {
+        hideAll();
+        document.getElementById('menuArea').style.display = 'none';
+        document.getElementById('userData').innerHTML = '';
+        drawLogin();
+      }
+    });
+
   } catch (e) {
-  console.error(e);
+    console.error(e);
   }
-  
-  });
+
+  document.getElementById('chatImput').addEventListener('keypress', porcessChatInput);
+  document.getElementById('sendButton').addEventListener('click', porcessChatInput);
+  document.getElementById('menuChat').addEventListener('click', showChat);
+  document.getElementById('menuSingOut').addEventListener('click', singOut);
+  firebase.database().ref('/messages').on('value', drawChats);
+});
