@@ -1,0 +1,21 @@
+/* Estilos de loguin*/
+.container, .rowone, .rowtwo, .rowthree, .rowfour{
+  text-align: center;
+}
+/*.rowone{
+  text-align: center;
+}
+.rowtwo{
+  text-align: center;
+}
+.rowthree{
+  text-align: center;
+}
+.rowfour{
+  text-align: center;
+}*/
+#pinguinodesplazamiento{
+  position: relative;
+  margin-top: 50%;
+
+}

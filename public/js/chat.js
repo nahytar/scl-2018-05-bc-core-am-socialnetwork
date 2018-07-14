@@ -41,9 +41,3 @@ const saveChatStatus = (istyping) => {
   if (!userDb) {
     userDb = firebase.database().ref('/chatUsers/' + user.uid);
   }
-  userDb.update({
-    lastAction: Date.now(),
-    name: user.displayName,
-    istyping: istyping
-  })
-}
