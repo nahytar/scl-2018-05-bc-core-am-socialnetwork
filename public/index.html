@@ -53,6 +53,7 @@
   <script src="js/chat.js">  </script>
   <script src="js/user.js">  </script>
   <script src="js/main.js">  </script>
+  <script src="js/post.js"></script>
 
   <div id="firebaseui-auth-container"></div>
   <div id="userData"></div>
@@ -69,7 +70,7 @@
       <a class="dropdown-item" href="#">CALENDARIO DE ACTIVIDADES</a>
       <a class="dropdown-item" href="#">REUNION DE APODERADOS</a>
       <a class="dropdown-item" href="#" id="menuChat">CHAT</a>
-      <a class="dropdown-item" href="#">TABLERO</a>
+      <a class="dropdown-item" href="#" id = "menuPost">TABLERO</a>
       <a class="dropdown-item" href="#" id="menuSingOut">CERRAR SESIÓN</a>
     </div>
   </div>
@@ -86,7 +87,12 @@
 
   <div id="postArea" class="postArea">
     <div id="postScreen"></div>
-    <input type="text" id="postImput">
+    <input type="text" id="postImput" placeholder="¿que piensas hoy?">
+    <div id="buttons">
+      <input id="sendButtonPost" type="button" value="Publicar">
+      <input id="sendButtonEdit"type="button" value="Editar">
+      <input id="sendButtonEliminar"type="button" value="Borrar">
+    </div>
   </div>
   <!-- ======================================simulador chat bot============================================ -->
   <div id="pinguinodesplazamiento">

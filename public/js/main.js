@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('chatImput').addEventListener('keypress', porcessChatInput);
   document.getElementById('sendButton').addEventListener('click', porcessChatInput);
   document.getElementById('menuChat').addEventListener('click', showChat);
+  document.getElementById('menuPost').addEventListener('click', showPost);
   document.getElementById('menuSingOut').addEventListener('click', singOut);
   firebase.database().ref('/messages').on('value', drawChats);
 });
