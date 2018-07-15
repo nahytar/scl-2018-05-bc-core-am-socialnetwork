@@ -1,9 +1,8 @@
 const hideAll = () => {
   document.getElementById("chatArea").style.display = "none";
-  document.getElementById("postImput").style.display = "";
   document.getElementById('imgLogo').style.display = 'none';
   document.getElementById('pingui').style.display = 'none';
-  document.getElementById('postArea').style.display = 'none'
+  document.getElementById('postArea').style.display = 'none';
 }
 
 const showChat = () => {
