@@ -25,7 +25,5 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('menuChat').addEventListener('click', showChat);
   document.getElementById('menuPost').addEventListener('click', showPost);
   document.getElementById('menuSingOut').addEventListener('click', singOut);
-  firebase.database().ref('/messages').on('value', drawChats);
   firebase.database().ref('/users').on('value', drawContacts);
-
 });
