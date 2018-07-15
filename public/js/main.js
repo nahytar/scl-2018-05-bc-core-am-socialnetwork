@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
+        updateUser();
         document.getElementById('menuArea').style.display = 'block';
         drawUserData();
-        saveChatStatus(false);
       } else {
         hideAll();
         document.getElementById('menuArea').style.display = 'none';
@@ -26,4 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('menuPost').addEventListener('click', showPost);
   document.getElementById('menuSingOut').addEventListener('click', singOut);
   firebase.database().ref('/messages').on('value', drawChats);
+  firebase.database().ref('/users').on('value', drawContacts);
+
 });

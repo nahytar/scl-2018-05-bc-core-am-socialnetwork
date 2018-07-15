@@ -1,5 +1,3 @@
-let userDb = null;
-
 const porcessChatInput = (event) => {
   const inputChat = document.getElementById('chatImput');
   // se le da por defecto el valor true a istyping
@@ -15,7 +13,7 @@ const porcessChatInput = (event) => {
     inputChat.value = "";
   }
   // actualiza estado del usuario
-  saveChatStatus(istyping);
+  updateUser({istyping:istyping});
 }
 
 const drawChats = (snapshot) => {
@@ -27,16 +25,10 @@ const drawChats = (snapshot) => {
   document.getElementById('chatScreen').innerHTML = chats;
 }
 
-const saveChatStatus = (istyping) => {
-  const user = firebase.auth().currentUser;
-  if (!userDb) {
-    userDb = firebase.database().ref('/chatUsers/' + user.uid);
-  }
-  userDb.update({
-    lastAction: Date.now(),
-    name: user.displayName,
-    istyping: istyping
+const drawContacts = (snapshot) => {
+  let contactsList = "<ul>";
+  Object.values(snapshot.val()).forEach((user) => {
+    contactsList += `<li>${user.name}</li>`
   })
+  document.getElementById('contactsArea').innerHTML = contactsList + "</ul>";
 }
-
-document.getElementById('imgLogo')
