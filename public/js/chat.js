@@ -3,7 +3,9 @@ const porcessChatInput = (event) => {
   const inputChat = document.getElementById('chatImput');
   // se le da por defecto el valor true a istyping
   let istyping = true;
-  if (event.key === "Enter" || !event.key) {
+  if (inputChat.value === "") {
+    alert("Tu mensaje esta vacio");
+  } else { (event.key === "Enter" || !event.key)
     istyping = false;
     event.preventDefault();
     messagesRef.push({
@@ -13,6 +15,7 @@ const porcessChatInput = (event) => {
     })
     inputChat.value = "";
   }
+  
   // actualiza estado del usuario
   updateUser({ istyping: istyping });
 }
@@ -37,7 +40,7 @@ const generateId = (uid1, uid2) => {
 
 // selecciona con quien va a chatear
 const selectChat = (uid, name, picture) => {
-  if(messagesRef) {
+  if (messagesRef) {
     messagesRef.off();
   }
   messagesRef = firebase.database().ref('chats/' + generateId(uid, firebase.auth().currentUser.uid) + '/messages');
