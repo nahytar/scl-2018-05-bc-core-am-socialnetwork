@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
     console.error(e);
   }
 
-  document.getElementById('chatImput').addEventListener('keypress', porcessChatInput);
-  document.getElementById('sendButton').addEventListener('click', porcessChatInput);
+  document.getElementById('chatImput').addEventListener('keypress', processChatInput);
+  document.getElementById('sendButton').addEventListener('click', processChatInput);
   document.getElementById('menuChat').addEventListener('click', showChat);
   document.getElementById('menuPost').addEventListener('click', showPost);
   document.getElementById('sendButtonPost').addEventListener('click', processPostInput);

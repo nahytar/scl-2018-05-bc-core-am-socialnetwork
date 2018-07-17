@@ -1,20 +1,26 @@
 let messagesRef;
-const porcessChatInput = (event) => {
+const processChatInput = (event) => {
   const inputChat = document.getElementById('chatImput');
   // se le da por defecto el valor true a istyping
   let istyping = true;
-  if (inputChat.value === "") {
-    alert("Tu mensaje esta vacio");
-  } else { (event.key === "Enter" || !event.key)
+  
+  if (event.key === "Enter" || !event.key) {
     istyping = false;
     event.preventDefault();
-    messagesRef.push({
-      name: firebase.auth().currentUser.displayName,
-      message: inputChat.value,
-      time: Date.now()
-    })
-    inputChat.value = "";
+    if(inputChat.value.length < 1) {
+      alert('Mensaje vacío')
+    } else {
+      messagesRef.push({
+        name: firebase.auth().currentUser.displayName,
+        uid: firebase.auth().currentUser.uid,
+        read: false,
+        message: inputChat.value,
+        time: Date.now()
+      })
+      inputChat.value = "";
+    }
   }
+  
   
   // actualiza estado del usuario
   updateUser({ istyping: istyping });
@@ -43,7 +49,14 @@ const selectChat = (uid, name, picture) => {
   if (messagesRef) {
     messagesRef.off();
   }
+  // 
   messagesRef = firebase.database().ref('chats/' + generateId(uid, firebase.auth().currentUser.uid) + '/messages');
+  // 
+  messagesRef.orderByChild('uid').equalTo(uid).once('value', (users) => {
+    users.forEach(user => {
+      user.ref.update({read:true})
+    })
+  });  
   messagesRef.on('value', drawChats);
   document.getElementById('chatTitle').innerHTML = `<img src="${picture}" height="32" width="32"> ${name}`;
 }
