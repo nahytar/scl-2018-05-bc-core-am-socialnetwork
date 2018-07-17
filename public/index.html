@@ -14,7 +14,7 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="public/style.css">
   <!-- link icono -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
     crossorigin="anonymous">
@@ -48,11 +48,12 @@
       </div>
   </div>
 
-  <script src="js/login.js">  </script>
-  <script src="js/menu.js">  </script>
-  <script src="js/chat.js">  </script>
-  <script src="js/user.js">  </script>
-  <script src="js/main.js">  </script>
+  <script src="js/login.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/user.js"></script>
+  <script src="js/post.js"></script>
+  <script src="js/main.js"></script>
 
   <div id="firebaseui-auth-container"></div>
   <div id="userData"></div>
@@ -69,14 +70,15 @@
       <a class="dropdown-item" href="#">CALENDARIO DE ACTIVIDADES</a>
       <a class="dropdown-item" href="#">REUNION DE APODERADOS</a>
       <a class="dropdown-item" href="#" id="menuChat">CHAT</a>
-      <a class="dropdown-item" href="#">TABLERO</a>
+      <a class="dropdown-item" href="#" id="menuPost">TABLERO</a>
       <a class="dropdown-item" href="#" id="menuSingOut">CERRAR SESIÓN</a>
     </div>
   </div>
 
   <!-- ===================================chat========================================= -->
-
   <div id="chatArea" class="chatArea">
+    <div id="contactsArea"></div>
+    <div id="chatTitle"></div>
     <div id="chatScreen"></div>
     <input id="chatImput" type="text" placeholder="Mensaje" maxlength="50" size="100">
     <input id="sendButton" type="button" value="Enviar">
@@ -85,8 +87,15 @@
   <!-- ======================================Post============================================ -->
 
   <div id="postArea" class="postArea">
-    <div id="postScreen"></div>
-    <input type="text" id="postImput">
+    
+    <input type="text" id="postInput" placeholder="¿que piensas hoy?" style="width: 100%;">
+    <div id="buttons">
+      <input id="sendButtonPost" type="button" value="Publicar">
+      <i class="fas fa-camera"></i>
+
+    </div>
+    <div class ="card" id="postScreen"></div>
+
   </div>
   <!-- ======================================simulador chat bot============================================ -->
   <div id="pinguinodesplazamiento">
