@@ -1,4 +1,4 @@
-/* Estilos de loguin*/
+/* ================================================= Estilos Loguin======================================================*/
 .container, .rowone, .rowtwo, .rowthree, .rowfour{
   text-align: center;
 }
@@ -70,4 +70,195 @@
   height: 40px;
   border:  rgb(145, 145, 145);
   margin-top: 20%;
+}
+
+/*================================================Estilo Actividades==================================================*/
+/* Estilos de imagen usuario*/
+
+/* btn menu hamburguesas*/
+.btn-secondary{
+  color: white;
+  background-color:white;
+  padding:7%;
+}
+/* estilo icono hamburguesa*/
+.fas{
+  color: black;
+  margin-top: 7%;
+}
+/* estilo texto mail*/
+#mailpredeterminado{
+  display:inline-table;
+  font-family: 'Nanum Gothic', sans-serif;
+  margin-left: 15%;
+  background-color:#5DCFC3;
+}
+/* estilo menu desplegable*/
+.dropdown-menu{
+  width: 35px;
+}
+/* estilo texto menu desplegable*/
+.dropdown-item{
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-size: 10px;
+}
+/* estilo div de fondo para integrar la hamburguesa y el mail*/
+#fondobanner{
+  background-color: #5DCFC3;
+}
+/* titulo de actividades "vaciones de invierno"*/
+.tituloavtividades{
+  text-align: center;
+  margin-top: 15%;
+}
+/* texto descripcion de atividades"*/
+.descripcionactividad{
+  text-align: center;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 10px;
+  padding: 5%;
+  border: 1px solid rgb(145, 145, 145);
+  margin-left:5%; 
+  margin-right:5%; 
+  background-color: rgba(93, 207, 196, 0.329)
+}
+/*================================================Estilo Actividades==================================================*/
+/* btn menu hamburguesas*/
+.btn-secondary{
+  color: white;
+  background-color:white;
+  padding:7%;
+}
+/* estilo icono hamburguesa*/
+.fas{
+  color: black;
+  margin-top: 7%;
+}
+/* estilo texto mail*/
+#mailpredeterminado{
+  display:inline-table;
+  font-family: 'Nanum Gothic', sans-serif;
+  margin-left: 15%;
+  background-color:#5DCFC3;
+}
+/* estilo menu desplegable*/
+.dropdown-menu{
+  width: 35px;
+}
+/* estilo texto menu desplegable*/
+.dropdown-item{
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-size: 10px;
+}
+/* estilo div de fondo para integrar la hamburguesa y el mail*/
+#fondobanner{
+  background-color: #5DCFC3;
+}
+/* titulo de actividades "vaciones de invierno"*/
+.tituloavtividades{
+  text-align: center;
+  margin-top: 15%;
+}
+/* texto descripcion de atividades"*/
+.descripcionactividad{
+  text-align: center;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 10px;
+  padding: 5%;
+  border: 1px solid rgb(145, 145, 145);
+  margin-left:5%; 
+  margin-right:5%; 
+  background-color: rgba(93, 207, 196, 0.329)
+}
+#imgreloj{
+  width: 50%;
+  display: block;
+  margin: auto;
+  margin-top: 10%;
+}
+#imgsino{
+  width:30%;
+  display: inline-block;
+ float: right;
+  margin: auto;
+}
+/*================================================Estilo Reunión==================================================*/
+/* Estilos de imagen usuario*/
+
+/* btn menu hamburguesas*/
+.btn-secondary{
+  color: white;
+  background-color:white;
+  padding:7%;
+}
+/* estilo icono hamburguesa*/
+.fas{
+  color: black;
+  margin-top: 7%;
+}
+/* estilo texto mail*/
+#mailpredeterminado{
+  display:inline-table;
+  font-family: 'Nanum Gothic', sans-serif;
+  margin-left: 15%;
+  background-color:#5DCFC3;
+}
+/* estilo menu desplegable*/
+.dropdown-menu{
+  width: 35px;
+}
+/* estilo texto menu desplegable*/
+.dropdown-item{
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-size: 10px;
+}
+/* estilo div de fondo para integrar la hamburguesa y el mail*/
+#fondobanner{
+  background-color: #5DCFC3;
+}
+/* titulo de actividades "vaciones de invierno"*/
+.tituloavtividades{
+  text-align: center;
+  margin-top: 15%;
+}
+/* texto descripcion de atividades"*/
+.descripcionactividad{
+  text-align: center;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 10px;
+  padding: 5%;
+  border: 1px solid rgb(145, 145, 145);
+  margin-left:5%; 
+  margin-right:5%; 
+  background-color: rgba(93, 207, 196, 0.329)
+}
+#imgreloj{
+  width: 50%;
+  display: block;
+  margin: auto;
+  margin-top: 10%;
+}
+#imgsino{
+  width:20%;
+  display: auto;
+  display:  inline-block;
+  margin: auto;
+  float: right;
+}
+#textoreunion{
+  text-align: center;
+  margin-top: 30%;
+  color: rgb(77, 77, 77);
+}
+#textos{
+  text-align: center;
+  display: block;
+  margin: auto;
+  color: #5DCFC3;
+}
+.tituloavtividades2{
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10%;
 }
