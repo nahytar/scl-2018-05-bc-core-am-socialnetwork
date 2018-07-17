@@ -10,6 +10,6 @@ const showChat = () => {
   document.getElementById("chatArea").style.display = "block";
 }
 const showPost = () => {
-hideAll();
-document.getElementById('postArea').style.display = 'block';
+  hideAll();
+  document.getElementById('postArea').style.display = 'block';
 }
