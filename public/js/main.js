@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
+        updateUser();
         document.getElementById('menuArea').style.display = 'block';
         drawUserData();
-        saveChatStatus(false);
       } else {
         hideAll();
         document.getElementById('menuArea').style.display = 'none';
@@ -20,12 +20,13 @@ document.addEventListener('DOMContentLoaded', function () {
     console.error(e);
   }
 
-  document.getElementById('chatImput').addEventListener('keypress', porcessChatInput);
-  document.getElementById('sendButton').addEventListener('click', porcessChatInput);
+  document.getElementById('chatImput').addEventListener('keypress', processChatInput);
+  document.getElementById('sendButton').addEventListener('click', processChatInput);
   document.getElementById('menuChat').addEventListener('click', showChat);
   document.getElementById('menuPost').addEventListener('click', showPost);
   document.getElementById('sendButtonPost').addEventListener('click', processPostInput);
   document.getElementById('menuSingOut').addEventListener('click', singOut);
   firebase.database().ref('/messages').on('value', drawChats);
   firebase.database().ref('/posts').on('value', drawPosts);
+  firebase.database().ref('/users').on('value', drawContacts);
 });
