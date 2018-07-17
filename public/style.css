@@ -73,39 +73,6 @@
 }
 
 /*================================================Estilo Actividades==================================================*/
-/* Estilos de imagen usuario*/
-
-/* btn menu hamburguesas*/
-.btn-secondary{
-  color: white;
-  background-color:white;
-  padding:7%;
-}
-/* estilo icono hamburguesa*/
-.fas{
-  color: black;
-  margin-top: 7%;
-}
-/* estilo texto mail*/
-#mailpredeterminado{
-  display:inline-table;
-  font-family: 'Nanum Gothic', sans-serif;
-  margin-left: 15%;
-  background-color:#5DCFC3;
-}
-/* estilo menu desplegable*/
-.dropdown-menu{
-  width: 35px;
-}
-/* estilo texto menu desplegable*/
-.dropdown-item{
-  font-family: 'Encode Sans Condensed', sans-serif;
-  font-size: 10px;
-}
-/* estilo div de fondo para integrar la hamburguesa y el mail*/
-#fondobanner{
-  background-color: #5DCFC3;
-}
 /* titulo de actividades "vaciones de invierno"*/
 .tituloavtividades{
   text-align: center;
@@ -123,37 +90,6 @@
   background-color: rgba(93, 207, 196, 0.329)
 }
 /*================================================Estilo Actividades==================================================*/
-/* btn menu hamburguesas*/
-.btn-secondary{
-  color: white;
-  background-color:white;
-  padding:7%;
-}
-/* estilo icono hamburguesa*/
-.fas{
-  color: black;
-  margin-top: 7%;
-}
-/* estilo texto mail*/
-#mailpredeterminado{
-  display:inline-table;
-  font-family: 'Nanum Gothic', sans-serif;
-  margin-left: 15%;
-  background-color:#5DCFC3;
-}
-/* estilo menu desplegable*/
-.dropdown-menu{
-  width: 35px;
-}
-/* estilo texto menu desplegable*/
-.dropdown-item{
-  font-family: 'Encode Sans Condensed', sans-serif;
-  font-size: 10px;
-}
-/* estilo div de fondo para integrar la hamburguesa y el mail*/
-#fondobanner{
-  background-color: #5DCFC3;
-}
 /* titulo de actividades "vaciones de invierno"*/
 .tituloavtividades{
   text-align: center;
@@ -183,39 +119,6 @@
   margin: auto;
 }
 /*================================================Estilo Reunión==================================================*/
-/* Estilos de imagen usuario*/
-
-/* btn menu hamburguesas*/
-.btn-secondary{
-  color: white;
-  background-color:white;
-  padding:7%;
-}
-/* estilo icono hamburguesa*/
-.fas{
-  color: black;
-  margin-top: 7%;
-}
-/* estilo texto mail*/
-#mailpredeterminado{
-  display:inline-table;
-  font-family: 'Nanum Gothic', sans-serif;
-  margin-left: 15%;
-  background-color:#5DCFC3;
-}
-/* estilo menu desplegable*/
-.dropdown-menu{
-  width: 35px;
-}
-/* estilo texto menu desplegable*/
-.dropdown-item{
-  font-family: 'Encode Sans Condensed', sans-serif;
-  font-size: 10px;
-}
-/* estilo div de fondo para integrar la hamburguesa y el mail*/
-#fondobanner{
-  background-color: #5DCFC3;
-}
 /* titulo de actividades "vaciones de invierno"*/
 .tituloavtividades{
   text-align: center;
@@ -265,37 +168,6 @@
 
 /*=================================================================Estilo Calendario======================================*/
 
-/* btn menu hamburguesas*/
-.btn-secondary{
-  color: white;
-  background-color:white;
-  padding:7%;
-}
-/* estilo icono hamburguesa*/
-.fas{
-  color: black;
-  margin-top: 7%;
-}
-/* estilo texto mail*/
-#mailpredeterminado{
-  display:inline-table;
-  font-family: 'Nanum Gothic', sans-serif;
-  margin-left: 15%;
-  background-color:#5DCFC3;
-}
-/* estilo menu desplegable*/
-.dropdown-menu{
-  width: 35px;
-}
-/* estilo texto menu desplegable*/
-.dropdown-item{
-  font-family: 'Encode Sans Condensed', sans-serif;
-  font-size: 10px;
-}
-/* estilo div de fondo para integrar la hamburguesa y el mail*/
-#fondobanner{
-  background-color: #5DCFC3;
-}
 /* titulo de actividades "vaciones de invierno"*/
 .tituloavtividades{
   text-align: center;
@@ -322,5 +194,24 @@
   width: 80%;
   display: block;
   margin: auto;
- 
+
+}
+/*Apagando pantallas*/
+#sectionmenu{  /* secciones de boton hamburguesa, para todas las ventanas*/
+  display: none;
+}
+#sectionbotonesactividad{ /* seccion de botones con actividades en pantalla menu + imagen usuario*/
+  display: none;
+}
+#sectionactividades{ /*seccion menu actividades escolares */
+  display: none;
+}
+#sectionautorizacion{ /*seccion autorizacion para apoderados*/
+  display: none;
+}
+#sectionreunion{ /* seccion reunión de apoderados*/
+  display: none;
+}
+#sectioncalendario{/*seccion calendario de actividades*/
+  display: none;
 }

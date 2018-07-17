@@ -18,8 +18,6 @@
   <!-- link icono -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
     crossorigin="anonymous">
-    
-
   <!-- update the version number as needed -->
   <script defer src="/__/firebase/5.2.0/firebase-app.js"></script>
   <!-- include only the Firebase features as you need -->
@@ -31,7 +29,6 @@
   <script defer src="/__/firebase/init.js"></script>
   <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
-
   <!--bootstrap-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
@@ -61,101 +58,27 @@
 
   <!-- ===================================menú========================================= -->
   <section id="sectionmenu">
-  <div id="menuArea" class="dropdown show">
-    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-      aria-expanded="false">
-      <i class="fas fa-align-justify"></i> Menú
-    </a>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <a class="dropdown-item" href="#">ACTIVIDADES</a>
-      <a class="dropdown-item" href="#">SALIDA A TERRENO</a>
-      <a class="dropdown-item" href="#">CALENDARIO DE ACTIVIDADES</a>
-      <a class="dropdown-item" href="#">REUNION DE APODERADOS</a>
-      <a class="dropdown-item" href="#" id="menuChat">CHAT</a>
-      <a class="dropdown-item" href="#" id="menuPost">TABLERO</a>
-      <a class="dropdown-item" href="#" id="menuSingOut">CERRAR SESIÓN</a>
-    </div>
+    <div id="menuArea" class="dropdown show">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        <i class="fas fa-align-justify"></i> Menú
+      </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="#">ACTIVIDADES</a>
+        <a class="dropdown-item" href="#">SALIDA A TERRENO</a>
+        <a class="dropdown-item" href="#">CALENDARIO DE ACTIVIDADES</a>
+        <a class="dropdown-item" href="#">REUNION DE APODERADOS</a>
+        <a class="dropdown-item" href="#" id="menuChat">CHAT</a>
+        <a class="dropdown-item" href="#" id="menuPost">TABLERO</a>
+        <a class="dropdown-item" href="#" id="menuSingOut">CERRAR SESIÓN</a>
+      </div>
   </section>
   <!-- sección botones de entrada-->
   <section id="sectionmenubotones">
     <div class="dropdown-show">
-        <div id="fondobanner">
-          <a class=" btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-align-justify" ></i> 
-          </a>
-          <p id="mailpredeterminado">Mail Apoderado</p>
-          <div class="dropdown-menu col-md-4 " aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Actividades</a>
-            <a class="dropdown-item" href="#">Salida a Terreno</a>
-            <a class="dropdown-item" href="#">Calendario Actividades</a>
-            <a class="dropdown-item" href="#">Reunión Apoderados</a>
-            <a class="dropdown-item" href="#">Chat</a>
-            <a class="dropdown-item" href="#">Tablero</a>
-            <a class="dropdown-item" href="#">Cerrar Sesión</a>
-          </div>
-          </div>
-        </div>
-      
-        <!-- ===================================img========================================= -->
-        <div class="img col-md-4" >
-          <img  id="imegenusuario"src="img/IMG007.png" alt="imagen usuario">
-        </div>
-      </section>
-        <!-- ===================================botones de actividades app========================================= -->
-        <div class="rowfive">
-        <div class="img col-md-4" >
-            <button type="button" href="#"class="btn btn-primary btn-lg btn-block">Atividades</button>
-            <button type="button" href="#"class="btn btn-primary btn-lg btn-block">Salida a Terreno</button>
-            <button type="button" href="#"class="btn btn-primary btn-lg btn-block">Calendario Actividades</button>
-            <button type="button" href="#"class="btn btn-primary btn-lg btn-block">Reunión Apoderados</button>
-            <button type="button" href="#"class="btn btn-primary btn-lg btn-block">Chat</button>
-            <button type="button" href="#"class="btn btn-primary btn-lg btn-block">Tablero</button>
-            <button type="button" href="#"class="btn btn-primary btn-lg btn-block">Cerrar Sesión</button>
-  
-        </div>
-      </div>
-  
-  </div>
-
-  <!-- ===================================chat========================================= -->
-  <div id="chatArea" class="chatArea">
-    
-    <div id="contactsArea"></div>
-    <div id="chatTitle"></div>
-    <div id="chatScreen"></div>
-    <input id="chatImput" type="text" placeholder="Mensaje" maxlength="50" size="100">
-    <input id="sendButton" type="button" value="Enviar">
-  </div>
-
-  <!-- ======================================Post============================================ -->
-
-  <div id="postArea" class="postArea">
-    
-    <input type="text" id="postInput" placeholder="¿que piensas hoy?" style="width: 100%;">
-    <div id="buttons">
-      <input id="sendButtonPost" type="button" value="Publicar">
-      <i class="fas fa-camera"></i>
-
-    </div>
-    <div class ="card" id="postScreen"></div>
-
-  </div>
-  <!-- ======================================simulador chat bot============================================ -->
-  <div id="pinguinodesplazamiento">
-    <ul>
-      <li>
-        <img id="pingui" style="width:40%" position="relative" src="img/img002.png" alt="pinguino">
-      </li>
-    </ul>
-  </div>
-  </div>
-  
-  <!-- ====================================== Muro ACTIVIDADES============================================ -->
-
-  <div class="dropdown-show">
       <div id="fondobanner">
         <a class=" btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-align-justify" ></i> 
+          <i class="fas fa-align-justify"></i>
         </a>
         <p id="mailpredeterminado">Mail Apoderado</p>
         <div class="dropdown-menu col-md-4 " aria-labelledby="dropdownMenuLink">
@@ -167,125 +90,134 @@
           <a class="dropdown-item" href="#">Tablero</a>
           <a class="dropdown-item" href="#">Cerrar Sesión</a>
         </div>
-        </div>
-      </div>
-      <!-- ===================================actividades========================================= -->
-      <section id="sectionactividades">
-      <div class="rowone">
-        <div class="col-md-4"></div>
-        <p class="tituloavtividades"> <i class="fas fa-globe-americas"></i>Vacaciones de invierno</p>
-        <p class="descripcionactividad">Vacaciones de invierno se refiere al receso durante época invernal en aquellas áreas dónde los inviernos presentan temperaturas bajas o extremas y los ...</p>
-        <div class="col-md-4"></div>
-        <p class="tituloavtividades"> <i class="fab fa-gratipay"></i>Día del Abuelo</p>
-        <p class="descripcionactividad">El Día del Abuelo o Día de los Abuelos es un día conmemorativo dedicado a los abuelos dentro de la familia, que complementa al Día de la Madre y al Día del Padre...</p>
-        <p class="tituloavtividades"><i class="fas fa-award"></i> Fiestas Patrias</p>
-        <p class="descripcionactividad">Las Fiestas Patrias en Chile, informalmente conocidas como «el Dieciocho», ​​ son una festividad anual que se ha realizado desde 1811​​ los días 18 y 19 de septiembre...</p>
-      </div>
-    </section>
-<!-- ====================================== Muro SALIDA A TERRENO ===================================== -->
-<div class="dropdown-show">
-    <div id="fondobanner">
-      <a class=" btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-align-justify" ></i> 
-      </a>
-      <p id="mailpredeterminado">Mail Apoderado</p>
-      <div class="dropdown-menu col-md-4 " aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item" href="#">Actividades</a>
-        <a class="dropdown-item" href="#">Salida a Terreno</a>
-        <a class="dropdown-item" href="#">Calendario Actividades</a>
-        <a class="dropdown-item" href="#">Reunión Apoderados</a>
-        <a class="dropdown-item" href="#">Chat</a>
-        <a class="dropdown-item" href="#">Tablero</a>
-        <a class="dropdown-item" href="#">Cerrar Sesión</a>
-      </div>
       </div>
     </div>
-    <!-- ===================================autorizacion ========================================= -->
-    <section="sectionautorizacion">
+    <!-- imgn usuario -->
+    <div class="img col-md-4">
+      <img id="imegenusuario" src="img/IMG007.png" alt="imagen usuario">
+    </div>
+  </section>
+  <!-- ===================================botones de actividades app========================================= -->
+  <section id="sectionbotonesactividad">
+  <div class="rowfive">
+    <div class="img col-md-4">
+      <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Atividades</button>
+      <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Salida a Terreno</button>
+      <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Calendario Actividades</button>
+      <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Reunión Apoderados</button>
+      <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Chat</button>
+      <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Tablero</button>
+      <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Cerrar Sesión</button>
+    </div>
+  </div>
+  </div>
+</section>
+
+  <!-- ===================================chat========================================= -->
+  <div id="chatArea" class="chatArea">
+
+    <div id="contactsArea"></div>
+    <div id="chatTitle"></div>
+    <div id="chatScreen"></div>
+    <input id="chatImput" type="text" placeholder="Mensaje" maxlength="50" size="100">
+    <input id="sendButton" type="button" value="Enviar">
+  </div>
+
+  <!-- ======================================Post============================================ -->
+
+  <div id="postArea" class="postArea">
+
+    <input type="text" id="postInput" placeholder="¿que piensas hoy?" style="width: 100%;">
+    <div id="buttons">
+      <input id="sendButtonPost" type="button" value="Publicar">
+      <i class="fas fa-camera"></i>
+
+    </div>
+    <div class="card" id="postScreen"></div>
+
+  </div>
+  <!-- ======================================simulador chat bot============================================ -->
+  <div id="pinguinodesplazamiento">
+    <ul>
+      <li>
+        <img id="pingui" style="width:40%" position="relative" src="img/img002.png" alt="pinguino">
+      </li>
+    </ul>
+  </div>
+  </div>
+
+  <!-- ===================================actividades========================================= -->
+  <section id="sectionactividades">
     <div class="rowone">
       <div class="col-md-4"></div>
-      <img id="imgreloj" src="img/img008.png" alt="imagenreloj"style="width:40%" position="relative" >
+      <p class="tituloavtividades">
+        <i class="fas fa-globe-americas"></i>Vacaciones de invierno</p>
+      <p class="descripcionactividad">Vacaciones de invierno se refiere al receso durante época invernal en aquellas áreas dónde los inviernos presentan
+        temperaturas bajas o extremas y los ...</p>
+      <div class="col-md-4"></div>
+      <p class="tituloavtividades">
+        <i class="fab fa-gratipay"></i>Día del Abuelo</p>
+      <p class="descripcionactividad">El Día del Abuelo o Día de los Abuelos es un día conmemorativo dedicado a los abuelos dentro de la familia, que complementa
+        al Día de la Madre y al Día del Padre...</p>
+      <p class="tituloavtividades">
+        <i class="fas fa-award"></i> Fiestas Patrias</p>
+      <p class="descripcionactividad">Las Fiestas Patrias en Chile, informalmente conocidas como «el Dieciocho», ​​ son una festividad anual que se ha realizado
+        desde 1811​​ los días 18 y 19 de septiembre...</p>
+    </div>
+  </section>
+  <!-- ====================================== Muro SALIDA A TERRENO ===================================== -->
+  <!--autorizacion  -->
+  <section id="sectionautorizacion">
+    <div class="rowone">
+      <div class="col-md-4"></div>
+      <img id="imgreloj" src="img/img008.png" alt="imagenreloj" style="width:40%" position="relative">
       <p class="tituloavtividades">Autorización</p>
-      <p class="descripcionactividad">Yo______________ autorizo a mi pupilo ________________ asistir el dia 9 de agosto del presente año, al teatro la Cúpula a las ....           </p>
+      <p class="descripcionactividad">Yo______________ autorizo a mi pupilo ________________ asistir el dia 9 de agosto del presente año, al teatro la Cúpula
+        a las .... </p>
       <div>
-        <img id="imgsino" src="img/img011.png" id="sendButton" onclick="sendMessage()"> 
-        <img id="imgsino"src="img/img010.png" id="sendButton"  onclick="sendMessage()">
+        <img id="imgsino" src="img/img011.png" id="sendButton" onclick="sendMessage()">
+        <img id="imgsino" src="img/img010.png" id="sendButton" onclick="sendMessage()">
       </div>
     </div>
   </section>
-       
-    <!-- ==================================Muro REUNION =====================================================-->
-    <div class="dropdown-show">
-        <div id="fondobanner">
-          <a class=" btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-align-justify" ></i> 
-          </a>
-          <p id="mailpredeterminado">Mail Apoderado</p>
-          <div class="dropdown-menu col-md-4 " aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Actividades</a>
-            <a class="dropdown-item" href="#">Salida a Terreno</a>
-            <a class="dropdown-item" href="#">Calendario Actividades</a>
-            <a class="dropdown-item" href="#">Reunión Apoderados</a>
-            <a class="dropdown-item" href="#">Chat</a>
-            <a class="dropdown-item" href="#">Tablero</a>
-            <a class="dropdown-item" href="#">Cerrar Sesión</a>
-          </div>
-          </div>
-        </div>
-        <!-- ===================================Reunion ========================================= -->
-        <section="sectionreunion">
-        <div class="rowone">
-          <div class="col-md-4"></div>
-          <img id="imgreloj" src="img/img008.png" alt="imagenreloj"style="width:80%" position="relative" >
-          <p class="tituloavtividades2">Reunión 9 de Agosto</p>
-            <img id="imgsino" src="img/img011.png" id="sendButton" onclick="sendMessage()"> 
-            <img id="imgsino"src="img/img010.png"  id="sendButton"  onclick="sendMessage()">
-        </div>
-        <div>
-          <p id="textoreunion">
-            Tópicos reunión anterior
-          </p>
-          <p id="textos">
-            -Cuotas curso
-          </p>
-          <p id="textos">
-              -Stand peña
-            </p>
-            <p id="textos">
-                -Fondos paseo
-              </p>
-        </div>
-      </section>
-<!-- ===================================================Menu Calendario==========================================-->
 
-<div class="dropdown-show">
-    <div id="fondobanner">
-      <a class=" btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-align-justify" ></i> 
-      </a>
-      <p id="mailpredeterminado">Mail Apoderado</p>
-      <div class="dropdown-menu col-md-4 " aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item" href="#">Actividades</a>
-        <a class="dropdown-item" href="#">Salida a Terreno</a>
-        <a class="dropdown-item" href="#">Calendario Actividades</a>
-        <a class="dropdown-item" href="#">Reunión Apoderados</a>
-        <a class="dropdown-item" href="#">Chat</a>
-        <a class="dropdown-item" href="#">Tablero</a>
-        <a class="dropdown-item" href="#">Cerrar Sesión</a>
-      </div>
-      </div>
+  <!-- ==================================Muro REUNION =====================================================-->
+  <!--Reunion  -->
+  <section id="sectionreunion">
+    <div class="rowone">
+      <div class="col-md-4"></div>
+      <img id="imgreloj" src="img/img008.png" alt="imagenreloj" style="width:80%" position="relative">
+      <p class="tituloavtividades2">Reunión 9 de Agosto</p>
+      <img id="imgsino" src="img/img011.png" id="sendButton" onclick="sendMessage()">
+      <img id="imgsino" src="img/img010.png" id="sendButton" onclick="sendMessage()">
     </div>
-    <!-- ===================================autorizacion ========================================= -->
-    <section id="sectioncalendario">
+    <div>
+      <p id="textoreunion">
+        Tópicos reunión anterior
+      </p>
+      <p id="textos">
+        -Cuotas curso
+      </p>
+      <p id="textos">
+        -Stand peña
+      </p>
+      <p id="textos">
+        -Fondos paseo
+      </p>
+    </div>
+  </section>
+  <!-- ===================================================Menu Calendario==========================================-->
+  <!--autorizacion  -->
+  <section class="sectioncalendario">
     <div class="rowone">
       <div class="col-md-4"></div>
       <p class="tituloavtividades">Calendario mensual</p>
-      <div> 
-        <img id="imgcalendario"src="img/calendario-julio-2018-turquesa.png" id="sendButton"  onclick="sendMessage()">
+      <div>
+        <img id="imgcalendario" src="img/calendario-julio-2018-turquesa.png" id="sendButton" onclick="sendMessage()">
       </div>
     </div>
   </section>
-<!-- ===================================================Menu ==========================================-->    
+  <!-- ===================================================Menu ==========================================-->
 
 </body>
 
