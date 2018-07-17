@@ -262,3 +262,65 @@
   text-align: center;
   margin-top: 10%;
 }
+
+/*=================================================================Estilo Calendario======================================*/
+
+/* btn menu hamburguesas*/
+.btn-secondary{
+  color: white;
+  background-color:white;
+  padding:7%;
+}
+/* estilo icono hamburguesa*/
+.fas{
+  color: black;
+  margin-top: 7%;
+}
+/* estilo texto mail*/
+#mailpredeterminado{
+  display:inline-table;
+  font-family: 'Nanum Gothic', sans-serif;
+  margin-left: 15%;
+  background-color:#5DCFC3;
+}
+/* estilo menu desplegable*/
+.dropdown-menu{
+  width: 35px;
+}
+/* estilo texto menu desplegable*/
+.dropdown-item{
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-size: 10px;
+}
+/* estilo div de fondo para integrar la hamburguesa y el mail*/
+#fondobanner{
+  background-color: #5DCFC3;
+}
+/* titulo de actividades "vaciones de invierno"*/
+.tituloavtividades{
+  text-align: center;
+  margin-top: 15%;
+}
+/* texto descripcion de atividades"*/
+.descripcionactividad{
+  text-align: center;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 10px;
+  padding: 5%;
+  border: 1px solid rgb(145, 145, 145);
+  margin-left:5%; 
+  margin-right:5%; 
+  background-color: rgba(93, 207, 196, 0.329)
+}
+#imgreloj{
+  width: 50%;
+  display: block;
+  margin: auto;
+  margin-top: 10%;
+}
+#imgcalendario{
+  width: 80%;
+  display: block;
+  margin: auto;
+ 
+}
