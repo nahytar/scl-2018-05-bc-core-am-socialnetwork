@@ -22,5 +22,52 @@
 #buttons{
   text-align: center;
   margin-top: 3%;
-  
+}
+/* ================================================= Estilos Menu======================================================*/
+/* Estilos de imagen usuario*/
+#imegenusuario{
+  width: 50%;
+  display: block;
+  margin: auto;
+
+}
+/* btn menu hamburguesas*/
+.btn-secondary{
+  color: white;
+  background-color:white;
+  padding:7%;
+}
+/* estilo icono hamburguesa*/
+.fas{
+  color: black;
+  margin-top: 7%;
+}
+/* estilo texto mail*/
+#mailpredeterminado{
+  display:inline-table;
+  font-family: 'Nanum Gothic', sans-serif;
+  margin-left: 15%;
+  background-color:#5DCFC3;
+}
+/* estilo menu desplegable*/
+.dropdown-menu{
+  width: 35px;
+}
+/* estilo texto menu desplegable*/
+.dropdown-item{
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-size: 10px;
+}
+/* estilo div de fondo para integrar la hamburguesa y el mail*/
+#fondobanner{
+  background-color: #5DCFC3;
+}
+/* estilo texto btns en el html de la pagina de menu*/
+.btn-primary{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+  background-color: rgb(145, 145, 145);
+  height: 40px;
+  border:  rgb(145, 145, 145);
+  margin-top: 20%;
 }
