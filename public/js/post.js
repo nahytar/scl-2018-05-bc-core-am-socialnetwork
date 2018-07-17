@@ -4,7 +4,7 @@ const processPostInput = () => {
   firebase.database().ref().child('posts').push({
    creator : firebase.auth().currentUser.displayName,
    text: postInput.value,
-   counter: counter
+   starCount: 0
   });
   postInput.value = '';
 };
@@ -40,16 +40,20 @@ const deletePost = (event) => {
 };
 
 //like post
-let counter = 1;
+let starCounter = 0;
 const like = (event) => {
-  event.stopPropagation();
+ starCounter += 1;
+ document.getElementById('likePost').innerHTML = starCounter;
   const idPostsLike = event.target.getAttribute('data-likePost');
   firebase.database().ref('posts').child(idPostsLike);
-  document.getElementById('likePost').innerHTML = counter++;
+  
 };
 
 //editar post
 
+function editPost(){
+
+}
 /*function editPosts(event){
   document.getElementById('postInput').value = postInput.value;
   const btnEdit = document.getElementById('sendButtonPost');
