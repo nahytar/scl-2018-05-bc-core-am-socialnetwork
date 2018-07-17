@@ -48,12 +48,12 @@
       </div>
   </div>
 
-  <script src="js/login.js">  </script>
-  <script src="js/menu.js">  </script>
-  <script src="js/chat.js">  </script>
-  <script src="js/user.js">  </script>
-  <script src="js/main.js">  </script>
+  <script src="js/login.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/user.js"></script>
   <script src="js/post.js"></script>
+  <script src="js/main.js"></script>
 
   <div id="firebaseui-auth-container"></div>
   <div id="userData"></div>
@@ -70,14 +70,15 @@
       <a class="dropdown-item" href="#">CALENDARIO DE ACTIVIDADES</a>
       <a class="dropdown-item" href="#">REUNION DE APODERADOS</a>
       <a class="dropdown-item" href="#" id="menuChat">CHAT</a>
-      <a class="dropdown-item" href="#" id = "menuPost">TABLERO</a>
+      <a class="dropdown-item" href="#" id="menuPost">TABLERO</a>
       <a class="dropdown-item" href="#" id="menuSingOut">CERRAR SESIÓN</a>
     </div>
   </div>
 
   <!-- ===================================chat========================================= -->
-
   <div id="chatArea" class="chatArea">
+    <div id="contactsArea"></div>
+    <div id="chatTitle"></div>
     <div id="chatScreen"></div>
     <input id="chatImput" type="text" placeholder="Mensaje" maxlength="50" size="100">
     <input id="sendButton" type="button" value="Enviar">
@@ -91,6 +92,7 @@
     <div id="buttons">
       <input id="sendButtonPost" type="button" value="Publicar">
       <i class="fas fa-camera"></i>
+
     </div>
     <div class ="card" id="postScreen"></div>
 

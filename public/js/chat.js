@@ -1,21 +1,29 @@
-let userDb = null;
-
-const porcessChatInput = (event) => {
+let messagesRef;
+const processChatInput = (event) => {
   const inputChat = document.getElementById('chatImput');
   // se le da por defecto el valor true a istyping
   let istyping = true;
+  
   if (event.key === "Enter" || !event.key) {
     istyping = false;
     event.preventDefault();
-    firebase.database().ref('/messages').push({
-      name: firebase.auth().currentUser.displayName,
-      message: inputChat.value,
-      time: Date.now()
-    })
-    inputChat.value = "";
+    if(inputChat.value.length < 1) {
+      alert('Mensaje vacío')
+    } else {
+      messagesRef.push({
+        name: firebase.auth().currentUser.displayName,
+        uid: firebase.auth().currentUser.uid,
+        read: false,
+        message: inputChat.value,
+        time: Date.now()
+      })
+      inputChat.value = "";
+    }
   }
+  
+  
   // actualiza estado del usuario
-  saveChatStatus(istyping);
+  updateUser({ istyping: istyping });
 }
 
 const drawChats = (snapshot) => {
@@ -27,16 +35,36 @@ const drawChats = (snapshot) => {
   document.getElementById('chatScreen').innerHTML = chats;
 }
 
-const saveChatStatus = (istyping) => {
-  const user = firebase.auth().currentUser;
-  if (!userDb) {
-    userDb = firebase.database().ref('/chatUsers/' + user.uid);
+// genera id de cada chat
+const generateId = (uid1, uid2) => {
+  if (uid1 < uid2) {
+    return uid1 + uid2;
+  } else {
+    return uid2 + uid1;
   }
-  userDb.update({
-    lastAction: Date.now(),
-    name: user.displayName,
-    istyping: istyping
-  })
 }
 
-document.getElementById('imgLogo')
+// selecciona con quien va a chatear
+const selectChat = (uid, name, picture) => {
+  if (messagesRef) {
+    messagesRef.off();
+  }
+  // 
+  messagesRef = firebase.database().ref('chats/' + generateId(uid, firebase.auth().currentUser.uid) + '/messages');
+  // 
+  messagesRef.orderByChild('uid').equalTo(uid).once('value', (users) => {
+    users.forEach(user => {
+      user.ref.update({read:true})
+    })
+  });  
+  messagesRef.on('value', drawChats);
+  document.getElementById('chatTitle').innerHTML = `<img src="${picture}" height="32" width="32"> ${name}`;
+}
+// lista de contactos
+const drawContacts = (snapshot) => {
+  let contactsList = "<ul>";
+  Object.values(snapshot.val()).forEach((user) => {
+    contactsList += `<li><img src="${user.profile_picture}" height="16" width="16"> <a href="#" onclick="selectChat('${user.uid}', '${user.name}', '${user.profile_picture}')">${user.name}</a></li>`
+  })
+  document.getElementById('contactsArea').innerHTML = contactsList + "</ul>";
+}
