@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,12 +57,12 @@
   <div id="userData"></div>
 
   <!-- ===================================menú========================================= -->
-  <section id="sectionmenu">
+  <!-- <section id="sectionmenu">
     <div id="menuArea" class="dropdown show">
       <a class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
         aria-expanded="false">
         <i class="fas fa-align-justify"></i> Menú
-      </a>
+      </a> -->
       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
         <a class="dropdown-item" href="#">ACTIVIDADES</a>
         <a class="dropdown-item" href="#">SALIDA A TERRENO</a>
@@ -76,24 +77,25 @@
   <section id="section menubotones">
     <div class="dropdown-show">
       <div id="fondobanner">
-        <a class=" btn-secondary"  role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class=" btn-secondary" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-align-justify"></i>
         </a>
         <p id="mailpredeterminado">Mail Apoderado</p>
         <img class="imglogosuperior" src="img/img005.png" alt="imagen logo">
         <div class="dropdown-menu col-md-4 " aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item menuProfile" href="#">Perfil</a>
           <a class="dropdown-item" href="#">Actividades</a>
           <a class="dropdown-item" href="#">Salida a Terreno</a>
           <a class="dropdown-item" href="#">Calendario Actividades</a>
           <a class="dropdown-item" href="#">Reunión Apoderados</a>
-          <a class="dropdown-item" href="#">Chat</a>
-          <a class="dropdown-item" href="#">Tablero</a>
-          <a class="dropdown-item" href="#">Cerrar Sesión</a>
+          <a class="dropdown-item menuChat" href="#">Chat</a>
+          <a class="dropdown-item menuPost" href="#">Tablero</a>
+          <a class="dropdown-item menuSingOut" href="#">Cerrar Sesión</a>
         </div>
       </div>
     </div>
-    </section>
-    <section id="imagenusuario">
+  </section>
+  <section id="imagenusuario">
     <!-- imgn usuario -->
     <div class="img col-md-12">
       <img id="imegenusuario" src="img/IMG007.png" alt="imagen usuario">
@@ -102,61 +104,61 @@
   </section>
   <!-- ===================================botones de actividades app========================================= -->
   <section id="sectionbotonesactividad">
-  <div class="row five">
-    <div class="img1 col-md-12">
-        <button type="button"  class="btn btn-primary btn-lg btn-block"> Actividades</button>
-        <button type="button"  class="btn btn-primary btn-lg btn-block">Salida a Terreno</button>
-        <button type="button"  class="btn btn-primary btn-lg btn-block">Calendario Actividades</button>
-        <button type="button"  class="btn btn-primary btn-lg btn-block">Reunión Apoderados</button>
-        <button type="button"  class="btn btn-primary btn-lg btn-block menuChat">Chat</button>
+    <div class="row five">
+      <div class="img1 col-md-12">
+        <button type="button" class="btn btn-primary btn-lg btn-block"> Actividades</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block">Salida a Terreno</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block">Calendario Actividades</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block">Reunión Apoderados</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block menuChat">Chat</button>
         <button type="button" class="btn btn-primary btn-lg btn-block">Tablero</button>
-       
-  <div class="card-footer text-muted">
-     <a class="footer">Cerrar Sesión</a> 
-    </div>
-  <div id="menuArea" class="dropdown-show">
-    <div id="fondobanner">
-      <a class=" btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="fas fa-align-justify"></i>
-      </a>
-      <p id="mailpredeterminado">Mail Apoderado</p>
-      <div class="dropdown-menu col-md-4 " aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item menuProfile" href="#">Perfil</a>
-        <a class="dropdown-item" href="#">Actividades</a>
-        <a class="dropdown-item" href="#">Salida a Terreno</a>
-        <a class="dropdown-item" href="#">Calendario Actividades</a>
-        <a class="dropdown-item" href="#">Reunión Apoderados</a>
-        <a class="dropdown-item menuChat" href="#">Chat</a>
-        <a class="dropdown-item menuPost" href="#">Tablero</a>
-        <a class="dropdown-item menuSingOut" href="#">Cerrar Sesión</a>
+
+        <div class="card-footer text-muted">
+          <a class="footer">Cerrar Sesión</a>
+        </div>
+        <!-- <div id="menuArea" class="dropdown-show">
+          <div id="fondobanner">
+            <a class=" btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-align-justify"></i>
+            </a>
+            <p id="mailpredeterminado">Mail Apoderado</p>
+            <div class="dropdown-menu col-md-4 " aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item menuProfile" href="#">Perfil</a>
+              <a class="dropdown-item" href="#">Actividades</a>
+              <a class="dropdown-item" href="#">Salida a Terreno</a>
+              <a class="dropdown-item" href="#">Calendario Actividades</a>
+              <a class="dropdown-item" href="#">Reunión Apoderados</a>
+              <a class="dropdown-item menuChat" href="#">Chat</a>
+              <a class="dropdown-item menuPost" href="#">Tablero</a>
+              <a class="dropdown-item menuSingOut" href="#">Cerrar Sesión</a>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- ===================================perfil de usuario========================================= -->
+        <div id="profileArea">
+          <!-- ===================================img========================================= -->
+          <div class="img col-md-4">
+            <img id="imegenusuario" src="img/IMG007.png" alt="">
+          </div>
+          <!-- ===================================botones de actividades app========================================= -->
+          <div class="rowfive">
+            <div class="img col-md-4">
+              <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Atividades</button>
+              <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Salida a Terreno</button>
+              <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Calendario Actividades</button>
+              <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Reunión Apoderados</button>
+              <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuChat">Chat</button>
+              <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuPost">Tablero</button>
+              <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuSingOut">Cerrar Sesión</button>
+
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
-
-  <!-- ===================================perfil de usuario========================================= -->
-  <div id="profileArea">
-    <!-- ===================================img========================================= -->
-    <div class="img col-md-4">
-      <img id="imegenusuario" src="img/IMG007.png" alt="">
-    </div>
-    <!-- ===================================botones de actividades app========================================= -->
-    <div class="rowfive">
-      <div class="img col-md-4">
-        <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Atividades</button>
-        <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Salida a Terreno</button>
-        <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Calendario Actividades</button>
-        <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Reunión Apoderados</button>
-        <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuChat">Chat</button>
-        <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuPost">Tablero</button>
-        <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuSingOut">Cerrar Sesión</button>
-
-      </div>
-    </div>
-  </div>
-
-  </div>
-  </div>
-</section>
+  </section>
 
   <!-- ===================================chat========================================= -->
   <div id="chatArea" class="chatArea">
