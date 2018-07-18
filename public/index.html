@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,8 +38,8 @@
   <!--creacion de login con restricciones de boostrap-->
   <div id="imgLogo" class="container">
     <form class="form-horizontal" role="form" method="POST" action="/login">
-      <div class="rowone">
-        <div class="col-md-4"></div>
+      <div class="row one">
+        <div class="col-md-12"></div>
         <!--aqui debe ir la img-->
         <img src="img/img003.png" alt="logo">
       </div>
@@ -59,7 +58,7 @@
   <!-- ===================================menú========================================= -->
   <section id="sectionmenu">
     <div id="menuArea" class="dropdown show">
-      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+      <a class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
         aria-expanded="false">
         <i class="fas fa-align-justify"></i> Menú
       </a>
@@ -74,13 +73,14 @@
       </div>
   </section>
   <!-- sección botones de entrada-->
-  <section id="sectionmenubotones">
+  <section id="section menubotones">
     <div class="dropdown-show">
       <div id="fondobanner">
-        <a class=" btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class=" btn-secondary"  role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-align-justify"></i>
         </a>
         <p id="mailpredeterminado">Mail Apoderado</p>
+        <img class="imglogosuperior" src="img/img005.png" alt="imagen logo">
         <div class="dropdown-menu col-md-4 " aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item" href="#">Actividades</a>
           <a class="dropdown-item" href="#">Salida a Terreno</a>
@@ -92,25 +92,28 @@
         </div>
       </div>
     </div>
+    </section>
+    <section id="imagenusuario">
     <!-- imgn usuario -->
-    <div class="img col-md-4">
+    <div class="img col-md-12">
       <img id="imegenusuario" src="img/IMG007.png" alt="imagen usuario">
     </div>
+    <p id="papade">Apoderado de alumno...</p>
   </section>
   <!-- ===================================botones de actividades app========================================= -->
   <section id="sectionbotonesactividad">
-  <div class="rowfive">
-    <div class="img col-md-4">
-      <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Atividades</button>
-      <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Salida a Terreno</button>
-      <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Calendario Actividades</button>
-      <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Reunión Apoderados</button>
-      <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Chat</button>
-      <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Tablero</button>
-      <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Cerrar Sesión</button>
+  <div class="row five">
+    <div class="img1 col-md-12">
+        <button type="button"  class="btn btn-primary btn-lg btn-block"> Actividades</button>
+        <button type="button"  class="btn btn-primary btn-lg btn-block">Salida a Terreno</button>
+        <button type="button"  class="btn btn-primary btn-lg btn-block">Calendario Actividades</button>
+        <button type="button"  class="btn btn-primary btn-lg btn-block">Reunión Apoderados</button>
+        <button type="button"  class="btn btn-primary btn-lg btn-block menuChat">Chat</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block">Tablero</button>
+       
+  <div class="card-footer text-muted">
+     <a class="footer">Cerrar Sesión</a> 
     </div>
-  </div>
-  </div>
 </section>
 
   <!-- ===================================chat========================================= -->
@@ -148,13 +151,13 @@
 
   <!-- ===================================actividades========================================= -->
   <section id="sectionactividades">
-    <div class="rowone">
-      <div class="col-md-4"></div>
+    <div class="row one">
+      <div class="col-md-12"></div>
       <p class="tituloavtividades">
         <i class="fas fa-globe-americas"></i>Vacaciones de invierno</p>
       <p class="descripcionactividad">Vacaciones de invierno se refiere al receso durante época invernal en aquellas áreas dónde los inviernos presentan
         temperaturas bajas o extremas y los ...</p>
-      <div class="col-md-4"></div>
+      <div class="col-md-12"></div>
       <p class="tituloavtividades">
         <i class="fab fa-gratipay"></i>Día del Abuelo</p>
       <p class="descripcionactividad">El Día del Abuelo o Día de los Abuelos es un día conmemorativo dedicado a los abuelos dentro de la familia, que complementa
@@ -168,8 +171,8 @@
   <!-- ====================================== Muro SALIDA A TERRENO ===================================== -->
   <!--autorizacion  -->
   <section id="sectionautorizacion">
-    <div class="rowone">
-      <div class="col-md-4"></div>
+    <div class="row one">
+      <div class="col-md-12"></div>
       <img id="imgreloj" src="img/img008.png" alt="imagenreloj" style="width:40%" position="relative">
       <p class="tituloavtividades">Autorización</p>
       <p class="descripcionactividad">Yo______________ autorizo a mi pupilo ________________ asistir el dia 9 de agosto del presente año, al teatro la Cúpula
@@ -184,8 +187,8 @@
   <!-- ==================================Muro REUNION =====================================================-->
   <!--Reunion  -->
   <section id="sectionreunion">
-    <div class="rowone">
-      <div class="col-md-4"></div>
+    <div class="row one">
+      <div class="col-md-12"></div>
       <img id="imgreloj" src="img/img008.png" alt="imagenreloj" style="width:80%" position="relative">
       <p class="tituloavtividades2">Reunión 9 de Agosto</p>
       <img id="imgsino" src="img/img011.png" id="sendButton" onclick="sendMessage()">
@@ -208,9 +211,9 @@
   </section>
   <!-- ===================================================Menu Calendario==========================================-->
   <!--autorizacion  -->
-  <section class="sectioncalendario">
-    <div class="rowone">
-      <div class="col-md-4"></div>
+  <section id="sectioncalendario">
+    <div class="row one">
+      <div class="col-md-12"></div>
       <p class="tituloavtividades">Calendario mensual</p>
       <div>
         <img id="imgcalendario" src="img/calendario-julio-2018-turquesa.png" id="sendButton" onclick="sendMessage()">
