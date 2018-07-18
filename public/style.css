@@ -22,7 +22,9 @@ body{
 #pinguinodesplazamiento{
   position: relative;
   margin-top: 50%;
-
+}
+.pinguii{
+width: 10%;
 }
 #buttons{
   text-align: center;
