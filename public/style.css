@@ -82,7 +82,7 @@
 .img1{
   text-align: center; /* botones centrados*/
   font-size: 14px;
- 
+  margin-top: 20%;
 }
 .dropdown-itema{
   font-family: 'Nanum Gothic', sans-serif;
@@ -96,7 +96,7 @@
 }
 
 #sectionbotonesactividad{
-  margin-top: 20%;
+  margin-top: 2%;
 }
 
 .footer{
