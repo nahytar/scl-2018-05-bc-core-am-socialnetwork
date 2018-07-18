@@ -49,14 +49,14 @@ const deletePost = (event) => {
 };
 
 //like post
-function like(event){
+const like = (event) => {
   event.stopPropagation();
   event.target.style.color = 'red';
   const idLike = event.target.getAttribute('data-likePost');
   firebase.database().ref('posts/' + idLike).once('value', function(post){
     let result = (post.val().starCount || 0)+ 1;
     console.log(result);
-    
+
     firebase.database().ref('posts').child(idLike).update({
       starCount: result
     });
@@ -65,9 +65,7 @@ function like(event){
 
 //editar post
 
-function editPost(){
 
-};
 /*function editPosts(event){
   document.getElementById('postInput').value = postInput.value;
   const btnEdit = document.getElementById('sendButtonPost');
