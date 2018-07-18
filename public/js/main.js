@@ -30,3 +30,15 @@ document.addEventListener('DOMContentLoaded', function () {
   firebase.database().ref('/posts').on('value', drawPosts);
   firebase.database().ref('/users').on('value', drawContacts);
 });
+
+// función apagado
+const sectionProfile = document.getElementById('sectionProfile');
+const sectionfixedMenu = document.getElementById('fixedMenu');
+​
+const btnProfile = document.getElementById('nameIconFooterProfile');
+btnProfile.addEventListener('click', () => {
+ sectionProfile.style.display = 'block';
+ seccionLogin.style.display = 'none';
+ seccionCenter.style.display = 'none';
+ sectionfixedMenu.style.display = 'block';
+});
