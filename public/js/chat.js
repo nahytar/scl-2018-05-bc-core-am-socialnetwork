@@ -88,3 +88,5 @@ const drawContacts = (snapshot) => {
   }
   document.getElementById('contactsArea').innerHTML = contactsList + "</ul>";
 }
+
+module.exports = {processChatInput, drawChats, generateId, selectChat, checkUnread, drawContacts}
