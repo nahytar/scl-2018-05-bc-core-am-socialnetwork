@@ -46,33 +46,31 @@
       </div>
   </div>
 
-  <script src="js/login.js"></script>
-  <script src="js/menu.js"></script>
-  <script src="js/chat.js"></script>
-  <script src="js/user.js"></script>
+  <script src="js/login.js">  </script>
+  <script src="js/menu.js">  </script>
+  <script src="js/chat.js">  </script>
+  <script src="js/user.js">  </script>
+  <script src="js/main.js">  </script>
   <script src="js/post.js"></script>
-  <script src="js/main.js"></script>
 
   <div id="firebaseui-auth-container"></div>
   <div id="userData"></div>
 
   <!-- ===================================menú========================================= -->
-  <!-- <section id="sectionmenu">
-    <div id="menuArea" class="dropdown show">
-      <a class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-        aria-expanded="false">
-        <i class="fas fa-align-justify"></i> Menú
-      </a> -->
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item" href="#">ACTIVIDADES</a>
-        <a class="dropdown-item" href="#">SALIDA A TERRENO</a>
-        <a class="dropdown-item" href="#">CALENDARIO DE ACTIVIDADES</a>
-        <a class="dropdown-item" href="#">REUNION DE APODERADOS</a>
-        <a class="dropdown-item" href="#" id="menuChat">CHAT</a>
-        <a class="dropdown-item" href="#" id="menuPost">TABLERO</a>
-        <a class="dropdown-item" href="#" id="menuSingOut">CERRAR SESIÓN</a>
-      </div>
-  </section>
+  <div id="menuArea" class="dropdown show">
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false">
+      <i class="fas fa-align-justify"></i> Menú
+    </a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <a class="dropdown-item" href="#">ACTIVIDADES</a>
+      <a class="dropdown-item" href="#">SALIDA A TERRENO</a>
+      <a class="dropdown-item" href="#">CALENDARIO DE ACTIVIDADES</a>
+      <a class="dropdown-item" href="#">REUNION DE APODERADOS</a>
+      <a class="dropdown-item" href="#" id="menuChat">CHAT</a>
+      <a class="dropdown-item" href="#" id = "menuPost">TABLERO</a>
+      <a class="dropdown-item" href="#" id="menuSingOut">CERRAR SESIÓN</a>
+      
   <!-- sección botones de entrada-->
   <section id="section menubotones">
     <div class="dropdown-show">
@@ -161,8 +159,8 @@
   </section>
 
   <!-- ===================================chat========================================= -->
-  <div id="chatArea" class="chatArea">
 
+  <div id="chatArea" class="chatArea">
     <div id="contactsArea"></div>
     <div id="chatTitle"></div>
     <div id="chatScreen"></div>
@@ -178,7 +176,8 @@
     <div id="buttons">
       <input id="sendButtonPost" type="button" value="Publicar">
       <i class="fas fa-camera"></i>
-
+    </div>
+    <div class ="card" id="postScreen">
     </div>
     <div class="card" id="postScreen"></div>
 
