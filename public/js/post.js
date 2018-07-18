@@ -42,8 +42,11 @@ const drawPosts = (snapshot) => {
 //borrar post
 const deletePost = (event) => {
   event.stopPropagation();
+  let confirmar = confirm('¿desea eliminar el post?');
+  if(confirmar === true){
   const idPosts = event.target.getAttribute('data-postId');
   firebase.database().ref('posts').child(idPosts).remove();
+  }else{}
 };
 
 //like post
@@ -51,53 +54,16 @@ function like(event){
   event.stopPropagation();
   event.target.style.color = 'red';
  const idLike = event.target.getAttribute('data-likePost');
- firebase.database().ref('posts/' + idLike).once('value', function(post){
+  firebase.database().ref('posts/' + idLike).once('value', function(post){
     let result = (post.val().starCount || 0)+ 1;
      console.log(result);
      //likePosts.innerHTML = result;
-     
      //likePosts.innerHTML += result;
   firebase.database().ref('posts').child(idLike).update({
     starCount: result
   });
-      
- });
+});
 };
-
-//like post
-/*let counter = 1;
-const like = (event) => {
- event.stopPropagation();
- const idPostsLike = event.target.getAttribute('data-likePost');
- firebase.database().ref('posts').child(idPostsLike);
- document.getElementById('likePost').innerHTML = counter++;
-};*/
-/*if(postStar) {
-  if(postStar.stars && post.stars[uid]){
-    postStar.starCount--;
-    postStar.stars[uid] = null;
-  } else {
-    postStar.starCount++;
-    if (!postStar.stars) {
-      postStar.stars ={};
-    }
-    postStar.stars[uid] = true;
-  }
-  return postStar;
-}*/
-
-/*function counterLike(event) {
-  event.stopPropagation();
-  const counterId = event.target.getAttribute("data-like");
-    firebase.database().ref(`post/`+ counterId).once("value", function(post) {
-      let total = post.child("counter").val();
-      postPrint.innerHTML += total;
-      let countId = firebase.database().ref(`post`).child(counterId).update({
-        counter: total,
-      });
-    });
- 
-  }*/
 
 //editar post
 
