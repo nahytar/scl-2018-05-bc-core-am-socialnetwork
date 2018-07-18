@@ -29,9 +29,12 @@
   width: 25%;
   display: block;
   margin: auto;
+  margin-top: 2%;
 }
 #papade{
   text-align: center;
+  margin-bottom: 0%;
+
 }
 .imglogosuperior{
   width: 15%;
@@ -94,17 +97,21 @@
   border-bottom: 1%;
   display: inline-block;
 }
-
-#sectionbotonesactividad{
+#menuArea{ /* margin de botones */
   margin-top: 2%;
+
 }
 
 .footer{
-  margin-top: 50%;
+  margin-top: -40%;
   font-size: 14px;
 }
+
+#sectionbotonesactividad{
+  margin-top: -20%;
+}
 .card-footer{
-  margin-top:30%; 
+  margin-top: 7%;
 }
 
 /*================================================Estilo Actividades==================================================*/
