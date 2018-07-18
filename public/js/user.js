@@ -1,8 +1,7 @@
 const drawUserData = () => {
   const user = firebase.auth().currentUser;
-
-  document.getElementById('userData').innerHTML = 
-    `<img src="${user.photoURL}" height="50" width="50">${user.displayName}`;
+  document.getElementById('imegenusuario').src = user.photoURL;
+  document.getElementById('mailpredeterminado').innerHTML = user.displayName;
 }
 
 const updateUser = (data) => {
@@ -11,7 +10,7 @@ const updateUser = (data) => {
     name: user.displayName,
     uid: user.uid,
     email: user.email,
-    profile_picture : user.photoURL,
+    profile_picture: user.photoURL,
     lastAction: Date.now(),
     ...data
   })

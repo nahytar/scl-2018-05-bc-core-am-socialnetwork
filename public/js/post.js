@@ -1,4 +1,3 @@
-
 const processPostInput = () => {
   const postInput = document.getElementById('postInput');
   if (postInput.value.length < 1) {
@@ -12,7 +11,6 @@ const processPostInput = () => {
     postInput.value = '';
   }
 };
-
 
 const drawPosts = (snapshot) => {
   let posting = '';
