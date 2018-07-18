@@ -34,13 +34,13 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // función apagado
-const sectionProfile = document.getElementById('sectionProfile');
-const sectionfixedMenu = document.getElementById('fixedMenu');
-​
-const btnProfile = document.getElementById('nameIconFooterProfile');
-btnProfile.addEventListener('click', () => {
- sectionProfile.style.display = 'block';
- seccionLogin.style.display = 'none';
- seccionCenter.style.display = 'none';
- sectionfixedMenu.style.display = 'block';
-});
+// const sectionProfile = document.getElementById('sectionProfile');
+// const sectionfixedMenu = document.getElementById('fixedMenu');
+// ​
+// const btnProfile = document.getElementById('nameIconFooterProfile');
+// btnProfile.addEventListener('click', () => {
+//  sectionProfile.style.display = 'block';
+//  seccionLogin.style.display = 'none';
+//  seccionCenter.style.display = 'none';
+//  sectionfixedMenu.style.display = 'block';
+// });
