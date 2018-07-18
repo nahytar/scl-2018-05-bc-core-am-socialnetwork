@@ -52,7 +52,7 @@ function like(event){
   event.target.style.color = 'red';
  const idLike = event.target.getAttribute('data-likePost');
  firebase.database().ref('posts/' + idLike).once('value', function(post){
-    let result = (post.val().starCount || 1);
+    let result = (post.val().starCount || 0)+ 1;
      console.log(result);
      //likePosts.innerHTML = result;
      
