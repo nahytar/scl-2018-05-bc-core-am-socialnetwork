@@ -59,60 +59,51 @@
   <div id="userData"></div>
 
   <!-- ===================================menú========================================= -->
-  <div id="menuArea" class="dropdown show">
-    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-      aria-expanded="false">
-      <i class="fas fa-align-justify"></i> Menú
-    </a>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <a class="dropdown-item" href="#">ACTIVIDADES</a>
-      <a class="dropdown-item" href="#">SALIDA A TERRENO</a>
-      <a class="dropdown-item" href="#">CALENDARIO DE ACTIVIDADES</a>
-      <a class="dropdown-item" href="#">REUNION DE APODERADOS</a>
-      <a class="dropdown-item" href="#" id="menuChat">CHAT</a>
-      <a class="dropdown-item" href="#" id="menuPost">TABLERO</a>
-      <a class="dropdown-item" href="#" id="menuSingOut">CERRAR SESIÓN</a>
-    </div>
-    <div class="dropdown-show">
-        <div id="fondobanner">
-          <a class=" btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-align-justify" ></i> 
-          </a>
-          <p id="mailpredeterminado">Mail Apoderado</p>
-          <div class="dropdown-menu col-md-4 " aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Actividades</a>
-            <a class="dropdown-item" href="#">Salida a Terreno</a>
-            <a class="dropdown-item" href="#">Calendario Actividades</a>
-            <a class="dropdown-item" href="#">Reunión Apoderados</a>
-            <a class="dropdown-item" href="#">Chat</a>
-            <a class="dropdown-item" href="#">Tablero</a>
-            <a class="dropdown-item" href="#">Cerrar Sesión</a>
-          </div>
-          </div>
-        </div>
-        <!-- ===================================img========================================= -->
-        <div class="img col-md-4" >
-          <img  id="imegenusuario"src="img/IMG007.png" alt="">
-        </div>
-        <!-- ===================================botones de actividades app========================================= -->
-        <div class="rowfive">
-        <div class="img col-md-4" >
-            <button type="button" href="#"class="btn btn-primary btn-lg btn-block">Atividades</button>
-            <button type="button" href="#"class="btn btn-primary btn-lg btn-block">Salida a Terreno</button>
-            <button type="button" href="#"class="btn btn-primary btn-lg btn-block">Calendario Actividades</button>
-            <button type="button" href="#"class="btn btn-primary btn-lg btn-block">Reunión Apoderados</button>
-            <button type="button" href="#"class="btn btn-primary btn-lg btn-block">Chat</button>
-            <button type="button" href="#"class="btn btn-primary btn-lg btn-block">Tablero</button>
-            <button type="button" href="#"class="btn btn-primary btn-lg btn-block">Cerrar Sesión</button>
-  
-        </div>
+  <div id="menuArea" class="dropdown-show">
+    <div id="fondobanner">
+      <a class=" btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-align-justify"></i>
+      </a>
+      <p id="mailpredeterminado">Mail Apoderado</p>
+      <div class="dropdown-menu col-md-4 " aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item menuProfile" href="#">Perfil</a>
+        <a class="dropdown-item" href="#">Actividades</a>
+        <a class="dropdown-item" href="#">Salida a Terreno</a>
+        <a class="dropdown-item" href="#">Calendario Actividades</a>
+        <a class="dropdown-item" href="#">Reunión Apoderados</a>
+        <a class="dropdown-item menuChat" href="#">Chat</a>
+        <a class="dropdown-item menuPost" href="#">Tablero</a>
+        <a class="dropdown-item menuSingOut" href="#">Cerrar Sesión</a>
       </div>
-  
+    </div>
+  </div>
+
+  <!-- ===================================perfil de usuario========================================= -->
+  <div id="profileArea">
+    <!-- ===================================img========================================= -->
+    <div class="img col-md-4">
+      <img id="imegenusuario" src="img/IMG007.png" alt="">
+    </div>
+    <!-- ===================================botones de actividades app========================================= -->
+    <div class="rowfive">
+      <div class="img col-md-4">
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Atividades</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Salida a Terreno</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Calendario Actividades</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Reunión Apoderados</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuChat">Chat</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuPost">Tablero</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuSingOut">Cerrar Sesión</button>
+
+      </div>
+    </div>
+  </div>
+
   </div>
 
   <!-- ===================================chat========================================= -->
   <div id="chatArea" class="chatArea">
-    
+
     <div id="contactsArea"></div>
     <div id="chatTitle"></div>
     <div id="chatScreen"></div>
@@ -123,14 +114,14 @@
   <!-- ======================================Post============================================ -->
 
   <div id="postArea" class="postArea">
-    
+
     <input type="text" id="postInput" placeholder="¿que piensas hoy?" style="width: 100%;">
     <div id="buttons">
       <input id="sendButtonPost" type="button" value="Publicar">
       <i class="fas fa-camera"></i>
 
     </div>
-    <div class ="card" id="postScreen"></div>
+    <div class="card" id="postScreen"></div>
 
   </div>
   <!-- ======================================simulador chat bot============================================ -->
@@ -142,7 +133,7 @@
     </ul>
   </div>
   </div>
-  
+
 
 </body>
 

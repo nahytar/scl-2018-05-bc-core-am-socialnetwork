@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         updateUser();
         document.getElementById('menuArea').style.display = 'block';
         drawUserData();
+        showProfile();
       } else {
         hideAll();
         document.getElementById('menuArea').style.display = 'none';
@@ -22,10 +23,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.getElementById('chatImput').addEventListener('keypress', processChatInput);
   document.getElementById('sendButton').addEventListener('click', processChatInput);
-  document.getElementById('menuChat').addEventListener('click', showChat);
-  document.getElementById('menuPost').addEventListener('click', showPost);
   document.getElementById('sendButtonPost').addEventListener('click', processPostInput);
-  document.getElementById('menuSingOut').addEventListener('click', singOut);
+  addListenerToClass('menuChat', showChat);
+  addListenerToClass('menuPost', showPost);
+  addListenerToClass('menuSingOut', singOut);
+  addListenerToClass('menuProfile', showProfile);
   firebase.database().ref('/messages').on('value', drawChats);
   firebase.database().ref('/posts').on('value', drawPosts);
   firebase.database().ref('/users').on('value', drawContacts);
