@@ -14,6 +14,11 @@
 .rowfour{
   text-align: center;
 }*/
+
+/* imagen fondo de pantalla*/
+body{
+  background-image: url(img/img0013.png);
+}
 #pinguinodesplazamiento{
   position: relative;
   margin-top: 50%;
@@ -29,7 +34,7 @@
   width: 25%;
   display: block;
   margin: auto;
-  margin-top: 2%;
+  margin-top:30%;
 }
 #papade{
   text-align: center;
@@ -256,7 +261,7 @@
   display: block;
 }
 #sectionactividades{ /*seccion menu actividades escolares */
-  display: block;
+  display: none;
 }
 #sectionautorizacion{ /*seccion autorizacion para apoderados*/
   display: none;
