@@ -1,4 +1,4 @@
-/* Estilos de loguin*/
+/* ================================================= Estilos Loguin======================================================*/
 .container, .rowone, .rowtwo, .rowthree, .rowfour{
   text-align: center;
 }
@@ -22,5 +22,241 @@
 #buttons{
   text-align: center;
   margin-top: 3%;
+}
+/* ================================================= Estilos Menu======================================================*/
+/* Estilos de imagen usuario*/
+#imegenusuario{
+  width: 25%;
+  display: block;
+  margin: auto;
+}
+#papade{
+  text-align: center;
+}
+.imglogosuperior{
+  width: 15%;
+  float: right;
+}
+/* btn menu hamburguesas*/
+.btn-secondary{
+  color: white;
+  background-color:white;
+  padding:7%;
+}
+/* estilo icono hamburguesa*/
+.fas{
+  color: black;
+  margin-top: 7%;
+}
+/* estilo texto mail*/
+#mailpredeterminado{
+  display:inline-table;
+  font-family: 'Nanum Gothic', sans-serif;
+  margin-left: 15%;
+  background-color:#84CBD4;
+}
+/* estilo menu desplegable*/
+.dropdown-menu{
+  width: 35px;
+}
+/* estilo texto menu desplegable*/
+.dropdown-item{
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-size: 10px;
+}
+/* estilo div de fondo para integrar la hamburguesa y el mail*/
+#fondobanner{
+  background-color: #84CBD4;
+}
+/* estilo texto btns en el html de la pagina de menu*/
+.btn-primary{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 14px;
+  background-color: rgb(145, 145, 145);
+  height: 40px;
+  border:  rgb(145, 145, 145);
+  margin: 0%;
+  margin-top: 20%; 
+  width: 100%;
+}
+.img1{
+  text-align: center; /* botones centrados*/
+  font-size: 14px;
+  margin-top: 20%;
+}
+.dropdown-itema{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+  background-color: rgb(145, 145, 145);
+  border:  rgb(145, 145, 145);
+  margin-top: 20%;
+  width: 50%;
+  border-bottom: 1%;
+  display: inline-block;
+}
+
+#sectionbotonesactividad{
+  margin-top: 2%;
+}
+
+.footer{
+  margin-top: 50%;
+  font-size: 14px;
+}
+.card-footer{
+  margin-top:30%; 
+}
+
+/*================================================Estilo Actividades==================================================*/
+/* titulo de actividades "vaciones de invierno"*/
+.tituloavtividades{
+  text-align: center;
+  margin-top: 15%;
+}
+/* texto descripcion de atividades"*/
+.descripcionactividad{
+  text-align: center;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 10px;
+  padding: 5%;
+  border: 1px solid rgb(145, 145, 145);
+  margin-left:5%; 
+  margin-right:5%; 
+  background-color: rgba(93, 207, 196, 0.329)
+}
+.firstactiviti{
+  text-align: center;
+
   
+}
+/*================================================Estilo Actividades==================================================*/
+/* titulo de actividades "vaciones de invierno"*/
+.tituloavtividades{
+  text-align: center;
+  margin-top: 15%;
+}
+/* texto descripcion de atividades"*/
+.descripcionactividad{
+  text-align: center;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 10px;
+  padding: 5%;
+  border: 1px solid rgb(145, 145, 145);
+  margin-left:5%; 
+  margin-right:5%; 
+  background-color: rgba(93, 207, 196, 0.329)
+}
+#imgreloj{
+  width: 50%;
+  display: block;
+  margin: auto;
+  margin-top: 10%;
+}
+#imgsino{
+  width:30%;
+  display: inline-block;
+ float: right;
+  margin: auto;
+}
+/*================================================Estilo Reunión==================================================*/
+/* titulo de actividades "vaciones de invierno"*/
+.tituloavtividades{
+  text-align: center;
+  margin-top: 15%;
+}
+/* texto descripcion de atividades"*/
+.descripcionactividad{
+  text-align: center;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 10px;
+  padding: 5%;
+  border: 1px solid rgb(145, 145, 145);
+  margin-left:5%; 
+  margin-right:5%; 
+  background-color: rgba(93, 207, 196, 0.329)
+}
+#imgreloj{
+  width: 50%;
+  display: block;
+  margin: auto;
+  margin-top: 10%;
+}
+#imgsino{
+  width:20%;
+  display: auto;
+  display:  inline-block;
+  margin: auto;
+  float: right;
+}
+#textoreunion{
+  text-align: center;
+  margin-top: 30%;
+  color: rgb(77, 77, 77);
+}
+#textos{
+  text-align: center;
+  display: block;
+  margin: auto;
+  color: #84CBD4;
+}
+.tituloavtividades2{
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10%;
+}
+
+/*=================================================================Estilo Calendario======================================*/
+
+/* titulo de actividades "vaciones de invierno"*/
+.tituloavtividades{
+  text-align: center;
+  margin-top: 15%;
+}
+/* texto descripcion de atividades"*/
+.descripcionactividad{
+  text-align: center;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 10px;
+  padding: 5%;
+  border: 1px solid rgb(145, 145, 145);
+  margin-left:5%; 
+  margin-right:5%; 
+  background-color: rgba(93, 207, 196, 0.329)
+}
+/* Img de reloj"*/
+#imgreloj{
+  width: 50%;
+  display: block;
+  margin: auto;
+  margin-top: 10%;
+}
+/* Img de calendario"*/
+#imgcalendario{
+  width: 80%;
+  display: block;
+  margin: auto;
+
+}
+/*Apagando pantallas*/
+#sectionmenu{  /* secciones de boton hamburguesa, para todas las ventanas*/
+  display: block;
+}
+#imagenusuario{/*seciion de imagen en perfil de usuario*/
+  display: block;
+}
+#sectionbotonesactividad{ /* seccion de botones con actividades en pantalla menu + imagen usuario*/
+  display: block;
+}
+#sectionactividades{ /*seccion menu actividades escolares */
+  display: block;
+}
+#sectionautorizacion{ /*seccion autorizacion para apoderados*/
+  display: none;
+}
+#sectionreunion{ /* seccion reunión de apoderados*/
+  display: none;
+}
+#sectioncalendario{/*seccion calendario de actividades*/
+  display: none;
 }
