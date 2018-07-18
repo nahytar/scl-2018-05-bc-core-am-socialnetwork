@@ -21,14 +21,13 @@ document.addEventListener('DOMContentLoaded', function () {
     console.error(e);
   }
 
-  document.getElementById('chatImput').addEventListener('keypress', processChatInput);
+  document.getElementById('chatImput').addEventListener('keyup', processChatInput);
   document.getElementById('sendButton').addEventListener('click', processChatInput);
   document.getElementById('sendButtonPost').addEventListener('click', processPostInput);
   addListenerToClass('menuChat', showChat);
   addListenerToClass('menuPost', showPost);
   addListenerToClass('menuSingOut', singOut);
   addListenerToClass('menuProfile', showProfile);
-  firebase.database().ref('/messages').on('value', drawChats);
   firebase.database().ref('/posts').on('value', drawPosts);
   firebase.database().ref('/users').on('value', drawContacts);
 });

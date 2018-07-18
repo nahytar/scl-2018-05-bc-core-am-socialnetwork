@@ -1,17 +1,16 @@
-
 const processPostInput = () => {
   const postInput = document.getElementById('postInput');
-  firebase.database().ref().child('posts').push({
-   creator : firebase.auth().currentUser.displayName,
-   text: postInput.value,
-   counter: counter
-  });
-  postInput.value = '';
+  if (postInput.value.length < 1) {
+    alert('Mensaje vacío')
+  } else {
+    firebase.database().ref().child('posts').push({
+      creator: firebase.auth().currentUser.displayName,
+      text: postInput.value,
+      counter: counter
+    })
+    postInput.value = '';
+  }
 };
-
-
-
-
 
 const drawPosts = (snapshot) => {
   let posting = '';
