@@ -348,28 +348,7 @@ width: 10%;
 .fas{
   color: grey;
 }
-/*Apagando pantallas*/
-#sectionmenu{  /* secciones de boton hamburguesa, para todas las ventanas*/
-  display: none;
-}
-#imagenusuario{/*seciion de imagen en perfil de usuario*/
-  display: none;
-}
-#sectionbotonesactividad{ /* seccion de botones con actividades en pantalla menu + imagen usuario*/
-  display: none;
-}
-#sectionactividades{ /*seccion menu actividades escolares */
-  display: none;
-}
-#sectionautorizacion{ /*seccion autorizacion para apoderados*/
-  display: none;
-}
-#sectionreunion{ /* seccion reunión de apoderados*/
-  display: none;
-}
-#sectioncalendario{/*seccion calendario de actividades*/
-  display: none;
-}
+
 img{
   border-radius: 100px;
 }
