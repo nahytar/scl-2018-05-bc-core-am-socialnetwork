@@ -89,13 +89,13 @@
     <!-- ===================================botones de actividades app========================================= -->
     <div class="row five">
       <div class="img col-md-4">
-        <button type="button" id="actividades"class="btn btn-primary btn-lg btn-block">Atividades</button>
-        <button type="button" id="salida" class="btn btn-primary btn-lg btn-block">Salida a Terreno</button>
-        <button type="button" id="calendario"class="btn btn-primary btn-lg btn-block">Calendario Actividades</button>
-        <button type="button" id="reunion" class="btn btn-primary btn-lg btn-block sectionreunion" >Reunión Apoderados</button>
-        <button type="button" id="chat" class="btn btn-primary btn-lg btn-block menuChat">Chat</button>
-        <button type="button" id="tablero" class="btn btn-primary btn-lg btn-block menuPost">Tablero</button>
-        <button type="button" id="cerrar" class="btn btn-primary btn-lg btn-block menuSingOut">Cerrar Sesión</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Atividades</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Salida a Terreno</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Calendario Actividades</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block sectionreunion">Reunión Apoderados</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuChat">Chat</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuPost">Tablero</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuSingOut">Cerrar Sesión</button>
 
       </div>
     </div>
@@ -120,7 +120,10 @@
   <!-- ======================================Post============================================ -->
 
   <div id="postArea" class="postArea">
-    <input type="text" id="postInput" placeholder="¿Qué estás pensando?" style="width: 100%;">
+
+    <input type="text" id="postInput" placeholder="¿que piensas hoy?" style="width: 100%;">
+    <input type="file" id="postImage" placeholder="¿que piensas hoy?" style="width: 100%;"
+    accept="image/png, image/jpeg" size="5000000 bytes">
     <div id="buttons">
       <input id="sendButtonPost" type="button" value="Publicar">
       <i class="fas fa-camera" style="color: white">
@@ -167,7 +170,7 @@
 
   <!-- ==================================Muro REUNION =====================================================-->
   <!--Reunion  -->
-  <section id="sectionreunion"class="sectionreunion">
+  <section class="sectionreunion" id="sectionreunion">
     <div class="row one">
       <div class="col-md-12"></div>
       <img id="imgreloj" src="img/img008.png" alt="imagenreloj" style="width:80%" position="relative">

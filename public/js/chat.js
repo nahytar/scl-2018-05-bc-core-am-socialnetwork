@@ -29,6 +29,7 @@ const processChatInput = (event) => {
   updateUser({ istyping: istyping });
 }
 
+// dibuja el chat 
 const drawChats = (snapshot) => {
   let chats = "";
   if (snapshot.val()) {
