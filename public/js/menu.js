@@ -8,7 +8,6 @@ const addListenerToClass = (className, callback) => {
 const hideAll = () => {
   document.getElementById("chatArea").style.display = "none";
   document.getElementById('imgLogo').style.display = 'none';
-  document.getElementById('pingui').style.display = 'none';
   document.getElementById('postArea').style.display = 'none';
   document.getElementById('profileArea').style.display = 'none';
 }
