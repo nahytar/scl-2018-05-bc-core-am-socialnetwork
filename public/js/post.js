@@ -37,7 +37,6 @@ const drawPosts = (snapshot) => {
     ` + posting;
   });
   document.getElementById('postScreen').innerHTML = posting;
-  
 };
 
 
