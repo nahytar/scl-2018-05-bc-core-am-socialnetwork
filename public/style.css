@@ -170,8 +170,8 @@ width: 10%;
 }
 #imgsino{
   width:30%;
-  display: inline-block;
- float: right;
+  
+  float: right;
   margin: auto;
 }
 /*================================================Estilo Reunión==================================================*/
@@ -197,13 +197,7 @@ width: 10%;
   margin: auto;
   margin-top: 10%;
 }
-#imgsino{
-  width:20%;
-  display: auto;
-  display:  inline-block;
-  margin: auto;
-  float: right;
-}
+
 #textoreunion{
   text-align: center;
   margin-top: 30%;
@@ -256,6 +250,78 @@ width: 10%;
 
 #profileArea{
   margin-top: 5%;
+  
+}
+/* =================================== Estilos chat========================================= */
+#chatArea{
+  background-color:rgba(255, 255, 255, 0.815);
+  
+}
+#contactsArea{/* fondo donde salen los contactos*/
+  margin-top: 20%;
+  background-color: rgba(255, 255, 255, 0.24);
+  padding: 2%;
+  margin: 3%;
+ 
+  
+}
+#chatTitle{/* estilo fondo donde escribe cada contacto*/
+  background-color: rgba(156, 242, 253, 0.322); /* color usuario 1*/
+  padding: 10%;
+  border: 2px solid #84CBD4;
+  font-family: 'Nanum Gothic', sans-serif;
+  border-radius: 2%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+#chatScreen{/* estilo */
+  background-color: rgba(156, 242, 253, 0.322); /* color usuario 1*/
+  padding: 10%;
+  border: 2px solid #84CBD4;
+  font-family: 'Nanum Gothic', sans-serif;
+  border-radius: 2%;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+#chatImput{/* estilo donde va escrito el mensaje*/
+  background-color: white;
+  margin-top: 10%;
+  font-family: 'Nanum Gothic', sans-serif;
+  border-radius: 2%;
+  border: 2px solid rgb(189, 189, 189);
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 20%;
+}
+#sendButton{/* estilo boton*/
+  border-radius: 3%;
+  color: white;
+  background-color: blueviolet;
+}
+/* =================================== Estilos chat========================================= */
+#postArea{ /* color de fondo*/
+  background-color:rgba(255, 255, 255, 0.815);
+}
+#postInput{ /* input color */
+  background-color:  white;
+  margin-top: 5%;
+  height: 20%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+#buttons{ /* banner publicar*/
+  background-color: #84CBD4;
+}
+#postScreen{
+  background-color: blueviolet;
+}
+#sendButtonPost{
+  color: white;
+  background-color: #84CBD4;
+}
+.card{
+  background-color: blue;
 }
 /*Apagando pantallas*/
 #sectionmenu{  /* secciones de boton hamburguesa, para todas las ventanas*/
