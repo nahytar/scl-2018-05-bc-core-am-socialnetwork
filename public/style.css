@@ -124,7 +124,9 @@ width: 10%;
 .tituloavtividades{
   text-align: center;
   margin-top: 15%;
+  margin-left: 8%;
 }
+
 /* texto descripcion de atividades"*/
 .descripcionactividad{
   text-align: center;
@@ -143,10 +145,9 @@ width: 10%;
 }
 /*================================================Estilo Actividades==================================================*/
 /* titulo de actividades "vaciones de invierno"*/
-.tituloavtividades{
-  text-align: center;
-  margin-top: 15%;
-}
+
+   
+
 /* texto descripcion de atividades"*/
 .descripcionactividad{
   text-align: center;
@@ -158,24 +159,29 @@ width: 10%;
   margin-right:5%; 
   background-color: rgba(93, 207, 196, 0.329)
 }
+
+.form-check {
+  margin-left: 10%;
+  padding: 10px;
+  background-color:white;
+}
+.fondobtnsino{
+  background-color: white;
+}
 #imgreloj{
   width: 50%;
   display: block;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 30%;
 }
 #imgsino{
   width:30%;
-  
   float: right;
   margin: auto;
 }
 /*================================================Estilo Reunión==================================================*/
 /* titulo de actividades "vaciones de invierno"*/
-.tituloavtividades{
-  text-align: center;
-  margin-top: 15%;
-}
+
 /* texto descripcion de atividades"*/
 .descripcionactividad{
   text-align: center;
@@ -215,10 +221,7 @@ width: 10%;
 /*=================================================================Estilo Calendario======================================*/
 
 /* titulo de actividades "vaciones de invierno"*/
-.tituloavtividades{
-  text-align: center;
-  margin-top: 15%;
-}
+
 /* texto descripcion de atividades"*/
 .descripcionactividad{
   text-align: center;
@@ -242,6 +245,7 @@ width: 10%;
   width: 80%;
   display: block;
   margin: auto;
+  border: 0%;
 }
 
 #profileArea{
@@ -348,7 +352,6 @@ width: 10%;
 .fas{
   color: grey;
 }
-
 img{
   border-radius: 100px;
 }
@@ -364,3 +367,19 @@ img{
 .unread {
  color: #84CBD4;
 }
+
+
+/* reunion*/
+.textosreunion{
+  text-align: center;
+  font-size: 14px;
+  background-color: white;
+}
+#autorizacion{
+   margin:auto;
+   padding: 10px;
+   background-color: white;
+   text-align: center
+  
+}
+
