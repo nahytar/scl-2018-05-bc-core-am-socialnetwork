@@ -19,10 +19,6 @@
 body{
   background-image: url(img/img0013.png);
 }
-#pinguinodesplazamiento{
-  position: relative;
-  margin-top: 50%;
-}
 .pinguii{
 width: 10%;
 }
@@ -354,13 +350,13 @@ width: 10%;
 }
 /*Apagando pantallas*/
 #sectionmenu{  /* secciones de boton hamburguesa, para todas las ventanas*/
-  display: block;
+  display: none;
 }
 #imagenusuario{/*seciion de imagen en perfil de usuario*/
-  display: block;
+  display: none;
 }
 #sectionbotonesactividad{ /* seccion de botones con actividades en pantalla menu + imagen usuario*/
-  display: block;
+  display: none;
 }
 #sectionactividades{ /*seccion menu actividades escolares */
   display: none;
@@ -373,4 +369,7 @@ width: 10%;
 }
 #sectioncalendario{/*seccion calendario de actividades*/
   display: none;
+}
+img{
+  border-radius: 100px;
 }
