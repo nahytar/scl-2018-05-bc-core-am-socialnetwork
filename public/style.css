@@ -262,8 +262,6 @@ width: 10%;
   background-color: rgba(255, 255, 255, 0.24);
   padding: 2%;
   margin: 3%;
- 
-  
 }
 #chatTitle{/* estilo fondo donde escribe cada contacto*/
   background-color: rgba(156, 242, 253, 0.322); /* color usuario 1*/
@@ -299,9 +297,10 @@ width: 10%;
   color: white;
   background-color: blueviolet;
 }
-/* =================================== Estilos chat========================================= */
+/* =================================== Estilos post========================================= */
 #postArea{ /* color de fondo*/
-  background-color:rgba(255, 255, 255, 0.815);
+  background-color: rgba(255, 255, 255, 0.24);
+  padding: 2%;
 }
 #postInput{ /* input color */
   background-color:  white;
@@ -314,7 +313,7 @@ width: 10%;
   background-color: #84CBD4;
 }
 #postScreen{
-  background-color: blueviolet;
+  background-color: rgba(255, 255, 255, 0.815);
 }
 #sendButtonPost{
   color: white;
@@ -322,6 +321,36 @@ width: 10%;
 }
 .card{
   background-color: blue;
+}
+#post{
+  background-color: rgba(255, 255, 255, 0.815);
+}
+.card-title{
+  background-color: rgba(255, 255, 255, 0.24);
+  width: 100%;
+}
+.list-group-item{
+  background-color: rgba(156, 242, 253, 0.322); /* color usuario 1*/
+  padding: 10%;
+  border: 2px solid #84CBD4;
+  font-family: 'Nanum Gothic', sans-serif;
+  border-radius: 2%;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 5%;
+  font-size: 20px;
+  color: rgb(89, 132, 138);
+ 
+}
+.card-text {
+ color: rgb(49, 49, 49);
+ font-family: 'Nanum Gothic', sans-serif;
+ font-size: 13px;
+
+
+}
+.fas{
+  color: grey;
 }
 /*Apagando pantallas*/
 #sectionmenu{  /* secciones de boton hamburguesa, para todas las ventanas*/
