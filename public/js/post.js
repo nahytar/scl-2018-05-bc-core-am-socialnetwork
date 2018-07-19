@@ -44,7 +44,6 @@ const drawPosts = (snapshot) => {
     }).catch(() => {});
   });
   document.getElementById('postScreen').innerHTML = posting;
-  
 };
 
 
