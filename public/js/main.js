@@ -30,4 +30,5 @@ document.addEventListener('DOMContentLoaded', function () {
   addListenerToClass('menuProfile', showProfile);
   firebase.database().ref('/posts').on('value', drawPosts);
   firebase.database().ref('/users').on('value', drawContacts);
+  addListenerToClass('sectionreunion', showProfile);
 });

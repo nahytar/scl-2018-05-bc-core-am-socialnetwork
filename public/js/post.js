@@ -24,13 +24,9 @@ const drawPosts = (snapshot) => {
     <ul class="list-group list-group-flush">
       <li class="list-group-item"> 
         <h6 class='card-title'><img src="${post[1].avatar}" height="32" width="32"> ${post[1].creator}</h6>
-<<<<<<< HEAD
-        <p id="${post[0]}" class='card-text text-justify editPost'>${post[1].text}</p>
-=======
         <p id="${post[0]}-txt" class="card-text text-justify editPost">
           ${post[1].text}
         </p>
->>>>>>> b523491ff80e6853d0bed17373d39a5a52a1c9df
         <i class="fas fa-trash-alt" id ="eliminarPost" data-postId="${post[0]}" 
           onclick="deletePost(event)">
         </i>

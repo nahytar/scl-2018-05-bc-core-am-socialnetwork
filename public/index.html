@@ -52,6 +52,7 @@
   <script src="js/user.js"></script>
   <script src="js/main.js"></script>
   <script src="js/post.js"></script>
+  <script src="js/reunion.js"></script>
 
   <div id="firebaseui-auth-container"></div>
   <div id="userData"></div>
@@ -70,7 +71,7 @@
         <a class="dropdown-item" href="#">Actividades</a>
         <a class="dropdown-item" href="#">Salida a Terreno</a>
         <a class="dropdown-item" href="#">Calendario Actividades</a>
-        <a class="dropdown-item sectionreunion" href="#">Reunión Apoderados</a>
+        <a class="dropdown-item sectionreunion"  href="#">Reunión Apoderados</a>
         <a class="dropdown-item menuChat" href="#">Chat</a>
         <a class="dropdown-item menuPost" href="#">Tablero</a>
         <a class="dropdown-item menuSingOut" href="#">Cerrar Sesión</a>
@@ -86,7 +87,7 @@
       <img id="imegenusuario" src="img/IMG007.png" alt="">
     </div>
     <!-- ===================================botones de actividades app========================================= -->
-    <div class="rowfive">
+    <div class="row five">
       <div class="img col-md-4">
         <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Atividades</button>
         <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Salida a Terreno</button>
@@ -112,7 +113,7 @@
     <div id="contactsArea"></div>
     <div id="chatTitle"></div>
     <div id="chatScreen"></div>
-    <input id="chatImput" type="text" placeholder="Mensaje" maxlength="50" size="100">
+    <input id="chatImput" type="text" placeholder="Escribe un mensaje aquí" maxlength="50" size="100">
     <input id="sendButton" type="button" value="Enviar">
   </div>
 
@@ -125,15 +126,15 @@
     accept="image/png, image/jpeg" size="5000000 bytes">
     <div id="buttons">
       <input id="sendButtonPost" type="button" value="Publicar">
-      <i class="fas fa-camera"></i>
+      <i class="fas fa-camera" style="color: white">
+      </i>
     </div>
     <div class="card" id="postScreen">
     </div>
     <div class="card" id="postScreen"></div>
-
   </div>
   <!-- ===================================actividades========================================= -->
-  <section id="sectionactividades">
+  <section id="sectionactividades"class="sectionactividades">
     <div class="row one">
       <div class="col-md-12"></div>
       <p class="tituloavtividades">
@@ -153,7 +154,7 @@
   </section>
   <!-- ====================================== Muro SALIDA A TERRENO ===================================== -->
   <!--autorizacion  -->
-  <section id="sectionautorizacion">
+  <section id="sectionautorizacion"class="sectionautorizacion">
     <div class="row one">
       <div class="col-md-12"></div>
       <img id="imgreloj" src="img/img008.png" alt="imagenreloj" style="width:40%" position="relative">
@@ -194,7 +195,7 @@
   </section>
   <!-- ===================================================Menu Calendario==========================================-->
   <!--autorizacion  -->
-  <section id="sectioncalendario">
+  <section id="sectioncalendario" class="sectioncalendario">
     <div class="row one">
       <div class="col-md-12"></div>
       <p class="tituloavtividades">Calendario mensual</p>
