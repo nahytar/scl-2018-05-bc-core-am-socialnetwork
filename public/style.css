@@ -320,7 +320,7 @@ width: 10%;
   background-color: #84CBD4;
 }
 .card{
-  background-color: blue;
+  background-color: #84CBD4
 }
 #post{
   background-color: rgba(255, 255, 255, 0.815);
@@ -343,9 +343,11 @@ width: 10%;
  
 }
 .card-text {
- color: rgb(49, 49, 49);
+ color: rgb(2, 2, 2);
  font-family: 'Nanum Gothic', sans-serif;
  font-size: 13px;
+ border-radius: 5px;
+ background-color: white;
 
 
 }
@@ -353,7 +355,7 @@ width: 10%;
   color: grey;
 }
 img{
-  border-radius: 100px;
+  border-radius: px;
 }
 
 
