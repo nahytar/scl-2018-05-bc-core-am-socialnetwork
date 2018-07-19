@@ -348,6 +348,10 @@ width: 10%;
 .fas{
   color: grey;
 }
+.card-footer{
+  background-color: red;
+  width: 100%;
+}
 /*Apagando pantallas*/
 #sectionmenu{  /* secciones de boton hamburguesa, para todas las ventanas*/
   display: none;

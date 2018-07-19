@@ -21,7 +21,6 @@ const drawPosts = (snapshot) => {
       <li class="list-group-item"> 
         <h6 class='card-title'><img src="${post[1].avatar} "> ${post[1].creator}</h6>
         <p class='card-text text-justify editPost'>${post[1].text}</p>
-
         <i class="fas fa-trash-alt" id ="eliminarPost" data-postId="${post[0]}" 
           onclick="deletePost(event)">
         </i>
