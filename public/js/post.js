@@ -24,12 +24,18 @@ const drawPosts = (snapshot) => {
     <ul class="list-group list-group-flush">
       <li class="list-group-item"> 
         <h6 class='card-title'><img src="${post[1].avatar}" height="32" width="32"> ${post[1].creator}</h6>
+<<<<<<< HEAD
         <p id="${post[0]}" class='card-text text-justify editPost'>${post[1].text}</p>
+=======
+        <p id="${post[0]}-txt" class="card-text text-justify editPost">
+          ${post[1].text}
+        </p>
+>>>>>>> b523491ff80e6853d0bed17373d39a5a52a1c9df
         <i class="fas fa-trash-alt" id ="eliminarPost" data-postId="${post[0]}" 
           onclick="deletePost(event)">
         </i>
-        <i class="fas fa-edit" id="editPost" data-editPost="${post[1].text}
-          "onclick="editPosts(event, drawPosts, uid)">
+        <i class="fas fa-edit" id="editPost" data-id="${post[0]}
+          "onclick="editPosts(event)"> 
        </i>
         <i class="fas fa-star" id="botonlike" onClick="like(event)" data-likePost="${post[0]}">
           <span id="likePosts">${post[1].starCount}</span>
@@ -59,7 +65,6 @@ const deletePost = (event) => {
 //like post
 const like = (event) => {
   event.stopPropagation();
-  event.target.style.color = 'red';
   const idLike = event.target.getAttribute('data-likePost');
   firebase.database().ref('posts/' + idLike).once('value', function(post){
     let result = (post.val().starCount || 0)+ 1;
@@ -70,3 +75,9 @@ const like = (event) => {
     });
   });
 };
+
+//edit Post
+
+/*const editPosts = (event) => {
+  let idEdit = event.target.getAttribute('data-id');
+};*/
