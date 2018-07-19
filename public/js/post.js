@@ -23,15 +23,10 @@ const drawPosts = (snapshot) => {
     posting = `
     <ul class="list-group list-group-flush">
       <li class="list-group-item"> 
-<<<<<<< HEAD
-        <h6 class='card-title'><img src="${post[1].avatar} "> ${post[1].creator}</h6>
-        <p class='card-text text-justify editPost'>${post[1].text}</p>
-=======
         <h6 class='card-title'><img src="${post[1].avatar}" height="32" width="32"> ${post[1].creator}</h6>
         <p id="${post[0]}-txt" class="card-text text-justify editPost">
           ${post[1].text}
         </p>
->>>>>>> upstream/master
         <i class="fas fa-trash-alt" id ="eliminarPost" data-postId="${post[0]}" 
           onclick="deletePost(event)">
         </i>
@@ -45,7 +40,7 @@ const drawPosts = (snapshot) => {
     </ul>
     ` + posting;
     firebase.storage().ref('/posts/' + post[0]).getDownloadURL().then((downloadURL) => {
-      document.getElementById(post[0]).innerHTML += `<img src="${downloadURL}" height="128" width="128">`
+      document.getElementById(post[0]).innerHTML += `<img src="${downloadURL}?alt=media" height="128" width="128">`
     }).catch(() => {});
   });
   document.getElementById('postScreen').innerHTML = posting;
