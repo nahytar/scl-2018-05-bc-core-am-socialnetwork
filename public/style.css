@@ -278,3 +278,15 @@ width: 10%;
 img{
   border-radius: 100px;
 }
+
+
+/*=================================================================Estilo Chat======================================*/
+
+#chatScreen {
+  overflow: scroll;
+  height: 50vh;
+}
+
+.unread {
+ color: #84CBD4;
+}
