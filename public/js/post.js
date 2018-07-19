@@ -6,16 +6,29 @@ const processPostInput = () => {
     const postId = firebase.database().ref().child('posts').push({
       creator: firebase.auth().currentUser.displayName,
       avatar: firebase.auth().currentUser.photoURL,
-      text:postInput.value,
+      text: postInput.value,
       starCount: 0
     }).key
     if (document.getElementById('postImage').files[0]) {
       const file = document.getElementById('postImage').files[0];
-      firebase.storage().ref(`/posts/${postId}`).put(file);
+      firebase.storage().ref(`/posts/${postId}`).put(file).then((snapshot) => {
+        snapshot.ref.getDownloadURL().then((downloadURL) => {
+          firebase.database().ref().child('posts/' + postId).update({
+            photoURL: downloadURL
+          });
+        }).catch(() => { });
+      });
     }
     postInput.value = '';
   }
 };
+
+const drawPhoto = (url) => {
+  if (url) {
+    return `<img src="${url}?alt=media" height="128" width="128">`;
+  }
+  return '';
+}
 
 const drawPosts = (snapshot) => {
   let posting = '';
@@ -27,6 +40,7 @@ const drawPosts = (snapshot) => {
         <p id="${post[0]}-txt" class="card-text text-justify editPost">
           ${post[1].text}
         </p>
+        ${drawPhoto(post[1].photoURL)}
         <i class="fas fa-trash-alt" id ="eliminarPost" data-postId="${post[0]}" 
           onclick="deletePost(event)">
         </i>
@@ -39,9 +53,6 @@ const drawPosts = (snapshot) => {
       </li>
     </ul>
     ` + posting;
-    firebase.storage().ref('/posts/' + post[0]).getDownloadURL().then((downloadURL) => {
-      document.getElementById(post[0]).innerHTML += `<img src="${downloadURL}?alt=media" height="128" width="128">` // el id post[0] es null
-    }).catch(() => {});
   });
   document.getElementById('postScreen').innerHTML = posting;
 };
@@ -51,18 +62,18 @@ const drawPosts = (snapshot) => {
 const deletePost = (event) => {
   event.stopPropagation();
   let confirmar = confirm('¿desea eliminar el post?');
-  if(confirmar === true){
+  if (confirmar === true) {
     const idPosts = event.target.getAttribute('data-postId');
     firebase.database().ref('posts').child(idPosts).remove();
-  }else{};
+  } else { };
 };
 
 //like post
 const like = (event) => {
   event.stopPropagation();
   const idLike = event.target.getAttribute('data-likePost');
-  firebase.database().ref('posts/' + idLike).once('value', function(post){
-    let result = (post.val().starCount || 0)+ 1;
+  firebase.database().ref('posts/' + idLike).once('value', function (post) {
+    let result = (post.val().starCount || 0) + 1;
     console.log(result);
 
     firebase.database().ref('posts').child(idLike).update({
