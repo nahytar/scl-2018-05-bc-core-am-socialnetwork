@@ -28,6 +28,10 @@ document.addEventListener('DOMContentLoaded', function () {
   addListenerToClass('menuPost', showPost);
   addListenerToClass('menuSingOut', singOut);
   addListenerToClass('menuProfile', showProfile);
+  addListenerToClass('menuCalendario', showCalendario)
+  addListenerToClass('menuReunion', showReunion)
+  addListenerToClass('menuSalida', showAutorizacion)
+  addListenerToClass('menuActividades', showActividades)
   firebase.database().ref('/posts').on('value', drawPosts);
   firebase.database().ref('/users').on('value', drawContacts);
   addListenerToClass('sectionreunion', showProfile);

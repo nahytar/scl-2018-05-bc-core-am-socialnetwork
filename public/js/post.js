@@ -40,7 +40,7 @@ const drawPosts = (snapshot) => {
     </ul>
     ` + posting;
     firebase.storage().ref('/posts/' + post[0]).getDownloadURL().then((downloadURL) => {
-      document.getElementById(post[0]).innerHTML += `<img src="${downloadURL}?alt=media" height="128" width="128">`
+      document.getElementById(post[0]).innerHTML += `<img src="${downloadURL}?alt=media" height="128" width="128">` // el id post[0] es null
     }).catch(() => {});
   });
   document.getElementById('postScreen').innerHTML = posting;

@@ -68,10 +68,10 @@
       <img id="pinguii" src="img/img003.png" style="width: 15%; float: right;" style="text-align: center;" alt="logo pequeño">
       <div class="dropdown-menu col-md-4 " aria-labelledby="dropdownMenuLink">
         <a class="dropdown-item menuProfile" href="#">Perfil</a>
-        <a class="dropdown-item" href="#">Actividades</a>
-        <a class="dropdown-item" href="#">Salida a Terreno</a>
-        <a class="dropdown-item" href="#">Calendario Actividades</a>
-        <a class="dropdown-item sectionreunion"  href="#">Reunión Apoderados</a>
+        <a class="dropdown-item menuActividades" href="#">Actividades</a>
+        <a class="dropdown-item menuSalida" href="#">Salida a Terreno</a>
+        <a class="dropdown-item menuCalendario" href="#">Calendario Actividades</a>
+        <a class="dropdown-item menuReunion" href="#">Reunión Apoderados</a>
         <a class="dropdown-item menuChat" href="#">Chat</a>
         <a class="dropdown-item menuPost" href="#">Tablero</a>
         <a class="dropdown-item menuSingOut" href="#">Cerrar Sesión</a>
@@ -89,10 +89,10 @@
     <!-- ===================================botones de actividades app========================================= -->
     <div class="row five">
       <div class="img col-md-4">
-        <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Atividades</button>
-        <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Salida a Terreno</button>
-        <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Calendario Actividades</button>
-        <button type="button" href="#" class="btn btn-primary btn-lg btn-block sectionreunion">Reunión Apoderados</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuActividades">Actividades</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuSalida">Salida a Terreno</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuCalendario">Calendario Actividades</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuReunion">Reunión Apoderados</button>
         <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuChat">Chat</button>
         <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuPost">Tablero</button>
         <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuSingOut">Cerrar Sesión</button>
@@ -100,11 +100,6 @@
       </div>
     </div>
   </div>
-  <!-- </div>
-  </div>
-  </section>
-
-  </section> -->
 
 
   <!-- ===================================chat========================================= -->
@@ -122,50 +117,60 @@
   <div id="postArea" class="postArea">
 
     <input type="text" id="postInput" placeholder="¿que piensas hoy?" style="width: 100%;">
-    <input type="file" id="postImage" placeholder="¿que piensas hoy?" style="width: 100%;"
-    accept="image/png, image/jpeg" size="5000000 bytes">
+    <input type="file" id="postImage" placeholder="¿que piensas hoy?" style="width: 100%;" accept="image/png, image/jpeg" size="5000000 bytes">
     <div id="buttons">
       <input id="sendButtonPost" type="button" value="Publicar">
       <i class="fas fa-camera" style="color: white">
       </i>
     </div>
-    <div class="card" id="postScreen">
+    <div class="card" id="postScstyle=" color: white "reen">
     </div>
     <div class="card" id="postScreen"></div>
   </div>
   <!-- ===================================actividades========================================= -->
-  <section id="sectionactividades"class="sectionactividades">
+  <section id="sectionactividades" class="sectionactividades">
     <div class="row one">
       <div class="col-md-12"></div>
       <p class="tituloavtividades">
-        <i class="fas fa-globe-americas"></i>Vacaciones de invierno</p>
+        <i class="fas fa-globe-americas" style="color: rgb(226, 178, 47);"></i>Vacaciones de invierno</p>
       <p class="descripcionactividad">Vacaciones de invierno se refiere al receso durante época invernal en aquellas áreas dónde los inviernos presentan
         temperaturas bajas o extremas y los ...</p>
       <div class="col-md-12"></div>
       <p class="tituloavtividades">
-        <i class="fab fa-gratipay"></i>Día del Abuelo</p>
+        <i class="fab fa-gratipay" style="color: rgb(226, 178, 47);"></i>Día del Abuelo</p>
       <p class="descripcionactividad">El Día del Abuelo o Día de los Abuelos es un día conmemorativo dedicado a los abuelos dentro de la familia, que complementa
         al Día de la Madre y al Día del Padre...</p>
       <p class="tituloavtividades">
-        <i class="fas fa-award"></i> Fiestas Patrias</p>
+        <i class="fas fa-award" style="color: rgb(226, 178, 47);"></i> Fiestas Patrias</p>
       <p class="descripcionactividad">Las Fiestas Patrias en Chile, informalmente conocidas como «el Dieciocho», ​​ son una festividad anual que se ha realizado
         desde 1811​​ los días 18 y 19 de septiembre...</p>
     </div>
   </section>
   <!-- ====================================== Muro SALIDA A TERRENO ===================================== -->
   <!--autorizacion  -->
-  <section id="sectionautorizacion"class="sectionautorizacion">
+  <section id="sectionautorizacion" class="sectionautorizacion">
     <div class="row one">
       <div class="col-md-12"></div>
-      <img id="imgreloj" src="img/img008.png" alt="imagenreloj" style="width:40%" position="relative">
-      <p class="tituloavtividades">Autorización</p>
-      <p class="descripcionactividad">Yo______________ autorizo a mi pupilo ________________ asistir el dia 9 de agosto del presente año, al teatro la Cúpula
-        a las .... </p>
-      <div>
-        <img id="imgsino" src="img/img011.png" id="sendButton" onclick="sendMessage()">
-        <img id="imgsino" src="img/img010.png" id="sendButton" onclick="sendMessage()">
+      <div id="imgreloje">
+        <img id="imgreloj" src="img/img008.png" style="width: 50%;" alt="imagenreloj">
       </div>
-    </div>
+      <div id="autorizacion ">
+        <p class="tituloavtividades">Autorización</p>
+        <p class="descripcionactividad">Yo______________ autorizo a mi pupilo ________________ asistir el dia 9 de agosto del presente año, al teatro la
+          Cúpula a las .... </p>
+        <div>
+        </div>
+        <div class="fondobtnsino">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1" style="color: greenyellow">SI</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2" style="color:orange ">NO</label>
+          </div>
+        </div>
+      </div>
   </section>
 
   <!-- ==================================Muro REUNION =====================================================-->
@@ -173,12 +178,27 @@
   <section class="sectionreunion" id="sectionreunion">
     <div class="row one">
       <div class="col-md-12"></div>
-      <img id="imgreloj" src="img/img008.png" alt="imagenreloj" style="width:80%" position="relative">
-      <p class="tituloavtividades2">Reunión 9 de Agosto</p>
-      <img id="imgsino" src="img/img011.png" id="sendButton" onclick="sendMessage()">
-      <img id="imgsino" src="img/img010.png" id="sendButton" onclick="sendMessage()">
+      <div id="imgreloje">
+        <img id="imgreloj" src="img/img008.png" style="width: 50%;" alt="imagenreloj">
+      </div>
+      <div id="autorizacion" style="text-aline:center;">
+        <p class="tituloavtividades">Próxima reunión 9 Agosto</p>
+        <div>
+        </div>
+        <div class="fondobtnsino">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1" style="color: greenyellow">SI</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2" style="color:orange ">NO</label>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div>
+    <div class="textosreunion">
       <p id="textoreunion">
         Tópicos reunión anterior
       </p>
