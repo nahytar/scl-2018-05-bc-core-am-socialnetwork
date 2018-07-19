@@ -5,7 +5,8 @@ const processPostInput = () => {
   } else {
     firebase.database().ref().child('posts').push({
       creator: firebase.auth().currentUser.displayName,
-      text: postInput.value,
+      avatar: firebase.auth().currentUser.photoURL,
+      text:postInput.value,
       starCount: 0
     })
     postInput.value = '';
@@ -17,8 +18,8 @@ const drawPosts = (snapshot) => {
   Object.entries(snapshot.val()).forEach((post) => {
     posting = `
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <h6 class='card-title'>${post[1].creator}</h6>
+      <li class="list-group-item"> 
+        <h6 class='card-title'><img src="${post[1].avatar} "> ${post[1].creator}</h6>
         <p class='card-text text-justify editPost'>${post[1].text}</p>
         <i class="fas fa-trash-alt" id ="eliminarPost" data-postId="${post[0]}" 
           onclick="deletePost(event)">
@@ -62,27 +63,3 @@ const like = (event) => {
     });
   });
 };
-
-//editar post
-
-
-/*function editPosts(event){
-  document.getElementById('postInput').value = postInput.value;
-  const btnEdit = document.getElementById('sendButtonPost');
-  btnEdit.innerHTML = 'editar';
-  
-  btnEdit.onclick = function() {
-    let postingText = document.getElementById('postInput').value;
-    const editText = event.target.getAttribute('data-editPost');
-    return firebase.database().ref('posts').child(editText).update({
-      text: postingText
-    }).then(function() {
-      console.log('editado');
-      btnEdit.innerHTML ='Publicar';
-    })
-    .catch(function(error){
-      console.error('error',error);
-    });
-  };
-};*/
-
