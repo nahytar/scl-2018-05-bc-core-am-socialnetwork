@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body >
+<body>
   <!--creacion de login con restricciones de boostrap-->
   <div id="imgLogo" class="container">
     <form class="form-horizontal" role="form" method="POST" action="/login">
@@ -52,59 +52,59 @@
   <script src="js/user.js"></script>
   <script src="js/main.js"></script>
   <script src="js/post.js"></script>
+  <script src="js/reunion.js"></script>
 
   <div id="firebaseui-auth-container"></div>
   <div id="userData"></div>
 
   <!-- ===================================menú========================================= -->
-   <div id="menuArea" class="dropdown-show">
-     <div id="fondobanner">
-            <a class=" btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-align-justify"></i>
-            </a>
-            <p id="mailpredeterminado" >Mail Apoderado 
-            </p>
-            <img id="pinguii" src="img/img003.png" style="width: 15%; float: right;" style="text-align: center;" alt="logo pequeño"> 
-            <div class="dropdown-menu col-md-4 " aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item menuProfile" href="#">Perfil</a>
-              <a class="dropdown-item" href="#">Actividades</a>
-              <a class="dropdown-item" href="#">Salida a Terreno</a>
-              <a class="dropdown-item" href="#">Calendario Actividades</a>
-              <a class="dropdown-item" href="#">Reunión Apoderados</a>
-              <a class="dropdown-item menuChat" href="#">Chat</a>
-              <a class="dropdown-item menuPost" href="#">Tablero</a>
-              <a class="dropdown-item menuSingOut" href="#">Cerrar Sesión</a>
-            </div>
-          </div>
-        </div>
-      
-        <!-- ===================================perfil de usuario========================================= -->
-        <div id="profileArea">
-          <!-- ===================================img========================================= -->
-          <div class="img1 col-md-4">
-              <p id="papade">Apoderado de alumno...</p>
-            <img id="imegenusuario" src="img/IMG007.png" alt="">
-          </div>
-          <!-- ===================================botones de actividades app========================================= -->
-          <div class="rowfive">
-            <div class="img col-md-4">
-             <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Atividades</button>
-              <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Salida a Terreno</button>
-             <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Calendario Actividades</button>
-           <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Reunión Apoderados</button>
-             <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuChat">Chat</button>
-            <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuPost">Tablero</button>
-            <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuSingOut">Cerrar Sesión</button>
-      
-           </div>
-          </div>
-        </div>
-      
-       </div>
+  <div id="menuArea" class="dropdown-show">
+    <div id="fondobanner">
+      <a class=" btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-align-justify"></i>
+      </a>
+      <p id="mailpredeterminado">Mail Apoderado
+      </p>
+      <img id="pinguii" src="img/img003.png" style="width: 15%; float: right;" style="text-align: center;" alt="logo pequeño">
+      <div class="dropdown-menu col-md-4 " aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item menuProfile" href="#">Perfil</a>
+        <a class="dropdown-item" href="#">Actividades</a>
+        <a class="dropdown-item" href="#">Salida a Terreno</a>
+        <a class="dropdown-item" href="#">Calendario Actividades</a>
+        <a class="dropdown-item sectionreunion"  href="#">Reunión Apoderados</a>
+        <a class="dropdown-item menuChat" href="#">Chat</a>
+        <a class="dropdown-item menuPost" href="#">Tablero</a>
+        <a class="dropdown-item menuSingOut" href="#">Cerrar Sesión</a>
       </div>
-       </section>
-   
+    </div>
+  </div>
+
+  <!-- ===================================perfil de usuario========================================= -->
+  <div id="profileArea">
+    <!-- ===================================img========================================= -->
+    <div class="img1 col-md-4">
+      <p id="papade">Apoderado de alumno...</p>
+      <img id="imegenusuario" src="img/IMG007.png" alt="">
+    </div>
+    <!-- ===================================botones de actividades app========================================= -->
+    <div class="row five">
+      <div class="img col-md-4">
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Atividades</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Salida a Terreno</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block">Calendario Actividades</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block sectionreunion">Reunión Apoderados</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuChat">Chat</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuPost">Tablero</button>
+        <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuSingOut">Cerrar Sesión</button>
+
+      </div>
+    </div>
+  </div>
+  <!-- </div>
+  </div>
   </section>
+
+  </section> -->
 
 
   <!-- ===================================chat========================================= -->
@@ -113,7 +113,7 @@
     <div id="contactsArea"></div>
     <div id="chatTitle"></div>
     <div id="chatScreen"></div>
-    <input id="chatImput" type="text" placeholder="Mensaje" maxlength="50" size="100">
+    <input id="chatImput" type="text" placeholder="Escribe un mensaje aquí" maxlength="50" size="100">
     <input id="sendButton" type="button" value="Enviar">
   </div>
 
@@ -122,27 +122,19 @@
   <div id="postArea" class="postArea">
 
     <input type="text" id="postInput" placeholder="¿que piensas hoy?" style="width: 100%;">
+    <input type="file" id="postImage" placeholder="¿que piensas hoy?" style="width: 100%;"
+    accept="image/png, image/jpeg" size="5000000 bytes">
     <div id="buttons">
       <input id="sendButtonPost" type="button" value="Publicar">
-      <i class="fas fa-camera"></i>
+      <i class="fas fa-camera" style="color: white">
+      </i>
     </div>
-    <div class ="card" id="postScreen">
+    <div class="card" id="postScreen">
     </div>
     <div class="card" id="postScreen"></div>
-
   </div>
-  <!-- ======================================simulador chat bot============================================ -->
-  <div id="pinguinodesplazamiento">
-    <ul>
-      <li>
-        <img id="pingui" style="width:40%" position="relative" src="img/img002.png" alt="pinguino">
-      </li>
-    </ul>
-  </div>
-  </div>
-
   <!-- ===================================actividades========================================= -->
-  <section id="sectionactividades">
+  <section id="sectionactividades"class="sectionactividades">
     <div class="row one">
       <div class="col-md-12"></div>
       <p class="tituloavtividades">
@@ -162,7 +154,7 @@
   </section>
   <!-- ====================================== Muro SALIDA A TERRENO ===================================== -->
   <!--autorizacion  -->
-  <section id="sectionautorizacion">
+  <section id="sectionautorizacion"class="sectionautorizacion">
     <div class="row one">
       <div class="col-md-12"></div>
       <img id="imgreloj" src="img/img008.png" alt="imagenreloj" style="width:40%" position="relative">
@@ -178,7 +170,7 @@
 
   <!-- ==================================Muro REUNION =====================================================-->
   <!--Reunion  -->
-  <section id="sectionreunion">
+  <section class="sectionreunion" id="sectionreunion">
     <div class="row one">
       <div class="col-md-12"></div>
       <img id="imgreloj" src="img/img008.png" alt="imagenreloj" style="width:80%" position="relative">
@@ -203,7 +195,7 @@
   </section>
   <!-- ===================================================Menu Calendario==========================================-->
   <!--autorizacion  -->
-  <section id="sectioncalendario">
+  <section id="sectioncalendario" class="sectioncalendario">
     <div class="row one">
       <div class="col-md-12"></div>
       <p class="tituloavtividades">Calendario mensual</p>

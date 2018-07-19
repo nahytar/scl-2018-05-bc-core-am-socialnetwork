@@ -3,12 +3,16 @@ const processPostInput = () => {
   if (postInput.value.length < 1) {
     alert('Mensaje vacío')
   } else {
-    firebase.database().ref().child('posts').push({
+    const postId = firebase.database().ref().child('posts').push({
       creator: firebase.auth().currentUser.displayName,
       avatar: firebase.auth().currentUser.photoURL,
       text:postInput.value,
       starCount: 0
-    })
+    }).key
+    if (document.getElementById('postImage').files[0]) {
+      const file = document.getElementById('postImage').files[0];
+      firebase.storage().ref(`/posts/${postId}`).put(file);
+    }
     postInput.value = '';
   }
 };
@@ -35,6 +39,9 @@ const drawPosts = (snapshot) => {
       </li>
     </ul>
     ` + posting;
+    firebase.storage().ref('/posts/' + post[0]).getDownloadURL().then((downloadURL) => {
+      document.getElementById(post[0]).innerHTML += `<img src="${downloadURL}" height="128" width="128">`
+    }).catch(() => {});
   });
   document.getElementById('postScreen').innerHTML = posting;
 };

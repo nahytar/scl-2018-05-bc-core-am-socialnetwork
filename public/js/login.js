@@ -1,6 +1,5 @@
 const drawLogin = () => {
     document.getElementById('imgLogo').style.display = 'block';
-    document.getElementById('pingui').style.display = 'block';
     var uiConfig = {
         signInSuccessUrl: '/',
         signInOptions: [
