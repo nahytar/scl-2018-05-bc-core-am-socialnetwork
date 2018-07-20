@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ConnectApp</title>
   <!-- links bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
@@ -33,9 +33,18 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+
+  <script src="js/login.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/user.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/post.js"></script>
+  <script src="js/reunion.js"></script>
 </head>
 
 <body>
+
   <!--creacion de login con restricciones de boostrap-->
   <div id="imgLogo" class="container">
     <form class="form-horizontal" role="form" method="POST" action="/login">
@@ -45,14 +54,6 @@
         <img src="img/img003.png" alt="logo">
       </div>
   </div>
-
-  <script src="js/login.js"></script>
-  <script src="js/menu.js"></script>
-  <script src="js/chat.js"></script>
-  <script src="js/user.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/post.js"></script>
-  <script src="js/reunion.js"></script>
 
   <div id="firebaseui-auth-container"></div>
   <div id="userData"></div>
@@ -80,15 +81,15 @@
   </div>
 
   <!-- ===================================perfil de usuario========================================= -->
-  <div id="profileArea">
-    <!-- ===================================img========================================= -->
-    <div class="img1 col-md-4">
-      <p id="papade">Apoderado de alumno...</p>
-      <img id="imegenusuario" src="img/IMG007.png" alt="">
-    </div>
-    <!-- ===================================botones de actividades app========================================= -->
-    <div class="row five">
-      <div class="img col-md-4">
+  <div class="container container-fluid">
+    <div id="profileArea" class="row">
+      <!-- ===================================img========================================= -->
+      <div class="img1 col col-md-12 col-lg-8">
+        <p id="papade">Apoderado de alumno...</p>
+        <img id="imegenusuario" src="img/IMG007.png" alt="">
+      </div>
+      <!-- ===================================botones de actividades app========================================= -->
+      <div class="img col col-md-12 col-lg-4">
         <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuActividades">Actividades</button>
         <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuSalida">Salida a Terreno</button>
         <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuCalendario">Calendario Actividades</button>
@@ -96,135 +97,131 @@
         <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuChat">Chat</button>
         <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuPost">Tablero</button>
         <button type="button" href="#" class="btn btn-primary btn-lg btn-block menuSingOut">Cerrar Sesión</button>
-
       </div>
     </div>
-  </div>
 
-
-  <!-- ===================================chat========================================= -->
-
-  <div id="chatArea" class="chatArea">
-    <div id="contactsArea"></div>
-    <div id="chatTitle"></div>
-    <div id="chatScreen"></div>
-    <input id="chatImput" type="text" placeholder="Escribe un mensaje aquí" maxlength="50" size="50">
-    <input id="sendButton" type="button" value="Enviar">
-  </div>
-
-  <!-- ======================================Post============================================ -->
-
-  <div id="postArea" class="postArea">
-
-    <input type="text" id="postInput" placeholder="¿que piensas hoy?" style="width: 100%;">
-    <input type="file" id="postImage" placeholder="¿que piensas hoy?" style="width: 100%;" accept="image/png, image/jpeg" size="5000000 bytes">
-    <div id="buttons">
-      <input id="sendButtonPost" type="button" value="Publicar">
-      <i class="fas fa-camera" style="color: white">
-      </i>
-    </div>
-    <div class="card" id="postScstyle=" >
-    </div>
-    <div class="card" id="postScreen"></div>
-  </div>
-  <!-- ===================================actividades========================================= -->
-  <section id="sectionactividades" class="sectionactividades">
-    <div class="row one">
-      <div class="col-md-12"></div>
-      <p class="tituloavtividades">
-        <i class="fas fa-globe-americas" style="color: rgb(226, 178, 47);"></i>Vacaciones de invierno</p>
-      <p class="descripcionactividad">Vacaciones de invierno se refiere al receso durante época invernal en aquellas áreas dónde los inviernos presentan
-        temperaturas bajas o extremas y los ...</p>
-      <div class="col-md-12"></div>
-      <p class="tituloavtividades">
-        <i class="fab fa-gratipay" style="color: rgb(226, 178, 47);"></i>Día del Abuelo</p>
-      <p class="descripcionactividad">El Día del Abuelo o Día de los Abuelos es un día conmemorativo dedicado a los abuelos dentro de la familia, que complementa
-        al Día de la Madre y al Día del Padre...</p>
-      <p class="tituloavtividades">
-        <i class="fas fa-award" style="color: rgb(226, 178, 47);"></i> Fiestas Patrias</p>
-      <p class="descripcionactividad">Las Fiestas Patrias en Chile, informalmente conocidas como «el Dieciocho», ​​ son una festividad anual que se ha realizado
-        desde 1811​​ los días 18 y 19 de septiembre...</p>
-    </div>
-  </section>
-  <!-- ====================================== Muro SALIDA A TERRENO ===================================== -->
-  <!--autorizacion  -->
-  <section id="sectionautorizacion" class="sectionautorizacion">
-    <div class="row one">
-      <div class="col-md-12"></div>
-      <div id="imgreloje">
-        <img id="imgreloj" src="img/img008.png" style="width: 50%;" alt="imagenreloj">
+    <!-- ===================================chat========================================= -->
+    <div id="chatArea" class="chatArea row">
+      <div id="contactsArea" class="col col-lg-4 col-md-12"></div>
+      <div class="col col-lg-8 col-md-12">
+        <div id="chatTitle"></div>
+        <div id="chatScreen"></div>
+        <input id="chatImput" type="text" placeholder="Escribe un mensaje aquí" maxlength="50" size="50">
+        <input id="sendButton" type="button" value="Enviar">
       </div>
-      <div id="autorizacion ">
-        <p class="tituloavtividades">Autorización</p>
-        <p class="descripcionactividad">Yo______________ autorizo a mi pupilo ________________ asistir el dia 9 de agosto del presente año, al teatro la
-          Cúpula a las .... </p>
+    </div>
+
+    <!-- ======================================Post============================================ -->
+
+    <div id="postArea" class="postArea">
+      <div id="buttons">
+        <input type="text" id="postInput" placeholder="¿que piensas hoy?">
+        <input type="file" id="postImage" accept="image/png, image/jpeg" size="5000000 bytes">
+        <input id="sendButtonPost" type="button" value="Publicar">
+        </i>
+      </div>
+      <div class="card" id="postScstyle=">
+      </div>
+      <div class="card" id="postScreen"></div>
+    </div>
+    <!-- ===================================actividades========================================= -->
+    <section id="sectionactividades" class="sectionactividades">
+      <div class="row one">
+        <div class="col-md-12"></div>
+        <p class="tituloavtividades">
+          <i class="fas fa-globe-americas" style="color: rgb(226, 178, 47);"></i>Vacaciones de invierno</p>
+        <p class="descripcionactividad">Vacaciones de invierno se refiere al receso durante época invernal en aquellas áreas dónde los inviernos presentan
+          temperaturas bajas o extremas y los ...</p>
+        <div class="col-md-12"></div>
+        <p class="tituloavtividades">
+          <i class="fab fa-gratipay" style="color: rgb(226, 178, 47);"></i>Día del Abuelo</p>
+        <p class="descripcionactividad">El Día del Abuelo o Día de los Abuelos es un día conmemorativo dedicado a los abuelos dentro de la familia, que complementa
+          al Día de la Madre y al Día del Padre...</p>
+        <p class="tituloavtividades">
+          <i class="fas fa-award" style="color: rgb(226, 178, 47);"></i> Fiestas Patrias</p>
+        <p class="descripcionactividad">Las Fiestas Patrias en Chile, informalmente conocidas como «el Dieciocho», ​​ son una festividad anual que se ha
+          realizado desde 1811​​ los días 18 y 19 de septiembre...</p>
+      </div>
+    </section>
+    <!-- ====================================== Muro SALIDA A TERRENO ===================================== -->
+    <!--autorizacion  -->
+    <section id="sectionautorizacion" class="sectionautorizacion">
+      <div class="row one">
+        <div class="col-md-12"></div>
+        <div id="imgreloje">
+          <img id="imgreloj" src="img/img008.png" style="width: 50%;" alt="imagenreloj">
+        </div>
+        <div id="autorizacion ">
+          <p class="tituloavtividades">Autorización</p>
+          <p class="descripcionactividad">Yo______________ autorizo a mi pupilo ________________ asistir el dia 9 de agosto del presente año, al teatro la
+            Cúpula a las .... </p>
+          <div>
+          </div>
+          <div class="fondobtnsino">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <label class="form-check-label" for="inlineRadio1" style="color: greenyellow">SI</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2" style="color:orange ">NO</label>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- ==================================Muro REUNION =====================================================-->
+    <!--Reunion  -->
+    <section class="sectionreunion" id="sectionreunion">
+      <div class="row one">
+        <div class="col-md-12"></div>
+        <div id="imgreloje">
+          <img id="imgreloj" src="img/img008.png" style="width: 50%;" alt="imagenreloj">
+        </div>
+        <div id="autorizacion" style="text-aline:center;">
+          <p class="tituloavtividades">Próxima reunión 9 Agosto</p>
+          <div>
+          </div>
+          <div class="fondobtnsino">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <label class="form-check-label" for="inlineRadio1" style="color: greenyellow">SI</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2" style="color:orange ">NO</label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="textosreunion">
+        <p id="textoreunion">
+          Tópicos reunión anterior
+        </p>
+        <p id="textos">
+          -Cuotas curso
+        </p>
+        <p id="textos">
+          -Stand peña
+        </p>
+        <p id="textos">
+          -Fondos paseo
+        </p>
+      </div>
+    </section>
+    <!-- ===================================================Menu Calendario==========================================-->
+    <!--autorizacion  -->
+    <section id="sectioncalendario" class="sectioncalendario">
+      <div class="row one">
+        <div class="col-md-12"></div>
+        <p class="tituloavtividades">Calendario mensual</p>
         <div>
-        </div>
-        <div class="fondobtnsino">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1" style="color: greenyellow">SI</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label" for="inlineRadio2" style="color:orange ">NO</label>
-          </div>
+          <img id="imgcalendario" src="img/calendario-julio-2018-turquesa.png" id="sendButton" onclick="sendMessage()">
         </div>
       </div>
-  </section>
-
-  <!-- ==================================Muro REUNION =====================================================-->
-  <!--Reunion  -->
-  <section class="sectionreunion" id="sectionreunion">
-    <div class="row one">
-      <div class="col-md-12"></div>
-      <div id="imgreloje">
-        <img id="imgreloj" src="img/img008.png" style="width: 50%;" alt="imagenreloj">
-      </div>
-      <div id="autorizacion" style="text-aline:center;">
-        <p class="tituloavtividades">Próxima reunión 9 Agosto</p>
-        <div>
-        </div>
-        <div class="fondobtnsino">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1" style="color: greenyellow">SI</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label" for="inlineRadio2" style="color:orange ">NO</label>
-          </div>
-        </div>
-      </div>
-
+    </section>
     </div>
-    <div class="textosreunion">
-      <p id="textoreunion">
-        Tópicos reunión anterior
-      </p>
-      <p id="textos">
-        -Cuotas curso
-      </p>
-      <p id="textos">
-        -Stand peña
-      </p>
-      <p id="textos">
-        -Fondos paseo
-      </p>
-    </div>
-  </section>
-  <!-- ===================================================Menu Calendario==========================================-->
-  <!--autorizacion  -->
-  <section id="sectioncalendario" class="sectioncalendario">
-    <div class="row one">
-      <div class="col-md-12"></div>
-      <p class="tituloavtividades">Calendario mensual</p>
-      <div>
-        <img id="imgcalendario" src="img/calendario-julio-2018-turquesa.png" id="sendButton" onclick="sendMessage()">
-      </div>
-    </div>
-  </section>
-  <!-- ===================================================Menu ==========================================-->
 </body>
 
 </html>

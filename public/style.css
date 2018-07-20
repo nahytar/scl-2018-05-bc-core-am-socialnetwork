@@ -1,7 +1,28 @@
-/* ================================================= Estilos Loguin======================================================*/
-.container, .rowone, .rowtwo, .rowthree, .rowfour{
+/* =================================================Estilos General======================================================*/
+
+.wrapper {
+  margin: auto;
+  max-width: 600px;
+}
+
+/* =================================================Estilos Perfil======================================================*/
+
+.col {
+  float: left;
+}
+
+@media(min-width: 768px) {
+  .container-fluid {
+    width: 80%;
+  }
+}
+
+/* =================================================Estilos Loguin======================================================*/
+
+.rowone, .rowtwo, .rowthree, .rowfour {
   text-align: center;
 }
+
 /*.rowone{
   text-align: center;
 }
@@ -16,202 +37,243 @@
 }*/
 
 /* imagen fondo de pantalla*/
-body{
+
+body {
   background-image: url(img/img0013.png);
 }
-.pinguii{
-width: 10%;
+
+.pinguii {
+  width: 10%;
 }
-#buttons{
+
+#buttons {
   text-align: center;
   margin-top: 3%;
+  background-color: #84CBD4;
+  z-index: 99999;
 }
+
+#imgLogo img {
+  margin: auto;
+}
+
 /* ================================================= Estilos Menu======================================================*/
+
 /* Estilos de imagen usuario*/
-#imegenusuario{
-  width: 25%;
+
+#imegenusuario {
+  width: 50%;
   display: block;
   margin: auto;
-  margin-top:2%;
+  margin-top: 2%;
 }
-.img1{
-  margin-top:0%;
+
+.img1 {
+  margin-top: 0%;
   padding: 0%;
   text-align: center;
 }
-#papade{
+
+#papade {
   text-align: center;
   margin-bottom: 0%;
-  margin-top: 2%;
-
+  margin-top: 5%;
 }
-.imglogosuperior{
+
+.imglogosuperior {
   width: 15%;
   float: right;
 }
+
 /* btn menu hamburguesas*/
-.btn-secondary{
+
+.btn-secondary {
   color: white;
-  background-color:white;
-  padding:7%;
+  background-color: white;
+  padding: 7%;
 }
+
 /* estilo icono hamburguesa*/
-.fas{
+
+.fas {
   color: black;
   margin-top: 7%;
 }
+
 /* estilo texto mail*/
-#mailpredeterminado{
-  display:inline-table;
+
+#mailpredeterminado {
+  display: inline-table;
   font-family: 'Nanum Gothic', sans-serif;
   margin-left: 15%;
-  background-color:#84CBD4;
+  background-color: #84CBD4;
 }
+
 /* estilo menu desplegable*/
-.dropdown-menu{
+
+.dropdown-menu {
   width: 35px;
 }
+
 /* estilo texto menu desplegable*/
-.dropdown-item{
+
+.dropdown-item {
   font-family: 'Encode Sans Condensed', sans-serif;
   font-size: 10px;
 }
+
 /* estilo div de fondo para integrar la hamburguesa y el mail*/
-#fondobanner{
+
+#fondobanner {
   background-color: #84CBD4;
 }
+
 /* estilo texto btns en el html de la pagina de menu*/
-.btn-primary{
+
+.btn-primary {
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 14px;
   background-color: rgb(145, 145, 145);
   height: 40px;
-  border:  rgb(145, 145, 145);
+  border: rgb(145, 145, 145);
   margin: 0%;
-  margin-top: 20%; 
   width: 100%;
 }
 
-.dropdown-itema{
+.dropdown-itema {
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 20px;
   background-color: rgb(145, 145, 145);
-  border:  rgb(145, 145, 145);
+  border: rgb(145, 145, 145);
   margin-top: 20%;
   width: 50%;
   border-bottom: 1%;
   display: inline-block;
 }
-#menuArea{ /* margin de botones */
-  margin-top: 2%;
 
+#menuArea {
+  /* margin de botones */
+  margin-top: 2%;
 }
 
-.footer{
+.footer {
   margin-top: -40%;
   font-size: 14px;
 }
 
-#sectionbotonesactividad{
+#sectionbotonesactividad {
   margin-top: -20%;
 }
-.card-footer{
+
+.card-footer {
   margin-top: 7%;
 }
 
 /*================================================Estilo Actividades==================================================*/
+
 /* titulo de actividades "vaciones de invierno"*/
-.tituloavtividades{
+
+.tituloavtividades {
   text-align: center;
   margin-top: 15%;
   margin-left: 8%;
 }
 
 /* texto descripcion de atividades"*/
-.descripcionactividad{
+
+.descripcionactividad {
   text-align: center;
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 10px;
   padding: 5%;
   border: 1px solid rgb(145, 145, 145);
-  margin-left:5%; 
-  margin-right:5%; 
+  margin-left: 5%;
+  margin-right: 5%;
   background-color: rgba(93, 207, 196, 0.329)
 }
-.firstactiviti{
-  text-align: center;
 
-  
+.firstactiviti {
+  text-align: center;
 }
+
 /*================================================Estilo Actividades==================================================*/
+
 /* titulo de actividades "vaciones de invierno"*/
 
-   
-
 /* texto descripcion de atividades"*/
-.descripcionactividad{
+
+.descripcionactividad {
   text-align: center;
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 10px;
   padding: 5%;
   border: 1px solid rgb(145, 145, 145);
-  margin-left:5%; 
-  margin-right:5%; 
+  margin-left: 5%;
+  margin-right: 5%;
   background-color: rgba(93, 207, 196, 0.329)
 }
 
 .form-check {
   margin-left: 10%;
   padding: 10px;
-  background-color:white;
-}
-.fondobtnsino{
   background-color: white;
 }
-#imgreloj{
+
+.fondobtnsino {
+  background-color: white;
+}
+
+#imgreloj {
   width: 50%;
   display: block;
   margin: auto;
   margin-top: 30%;
 }
-#imgsino{
-  width:30%;
+
+#imgsino {
+  width: 30%;
   float: right;
   margin: auto;
 }
+
 /*================================================Estilo Reunión==================================================*/
+
 /* titulo de actividades "vaciones de invierno"*/
 
 /* texto descripcion de atividades"*/
-.descripcionactividad{
+
+.descripcionactividad {
   text-align: center;
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 10px;
   padding: 5%;
   border: 1px solid rgb(145, 145, 145);
-  margin-left:5%; 
-  margin-right:5%; 
+  margin-left: 5%;
+  margin-right: 5%;
   background-color: rgba(93, 207, 196, 0.329)
 }
-#imgreloj{
+
+#imgreloj {
   width: 50%;
   display: block;
   margin: auto;
   margin-top: 10%;
 }
 
-#textoreunion{
+#textoreunion {
   text-align: center;
   margin-top: 30%;
   color: rgb(77, 77, 77);
 }
-#textos{
+
+#textos {
   text-align: center;
   display: block;
   margin: auto;
   color: #84CBD4;
 }
-.tituloavtividades2{
+
+.tituloavtividades2 {
   font-family: 'Alfa Slab One', cursive;
   font-size: 30px;
   text-align: center;
@@ -223,114 +285,143 @@ width: 10%;
 /* titulo de actividades "vaciones de invierno"*/
 
 /* texto descripcion de atividades"*/
-.descripcionactividad{
+
+.descripcionactividad {
   text-align: center;
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 10px;
   padding: 5%;
   border: 1px solid rgb(145, 145, 145);
-  margin-left:5%; 
-  margin-right:5%; 
+  margin-left: 5%;
+  margin-right: 5%;
   background-color: rgba(93, 207, 196, 0.329)
 }
+
 /* Img de reloj"*/
-#imgreloj{
+
+#imgreloj {
   width: 50%;
   display: block;
   margin: auto;
   margin-top: 10%;
 }
+
 /* Img de calendario"*/
-#imgcalendario{
+
+#imgcalendario {
   width: 80%;
   display: block;
   margin: auto;
   border: 0%;
 }
 
-#profileArea{
-  margin-top: 5%;
-  
-}
 /* =================================== Estilos chat========================================= */
-#chatArea{
-  background-color:rgba(255, 255, 255, 0.815);
-  
+
+#chatArea {
+  background-color: rgba(255, 255, 255, 0.815);
 }
-#contactsArea{/* fondo donde salen los contactos*/
-  margin-top: 20%;
+
+#contactsArea {
+  /* fondo donde salen los contactos*/
+  margin-top: 5%;
   background-color: rgba(255, 255, 255, 0.24);
   padding: 2%;
-  margin: 3%;
+  overflow: scroll;
+  min-height: 30vh;
+  max-height: 50vh;
 }
-#chatTitle{/* estilo fondo donde escribe cada contacto*/
-  background-color: rgba(156, 242, 253, 0.322); /* color usuario 1*/
+
+#chatTitle {
+  /* estilo fondo donde escribe cada contacto*/
+  background-color: rgba(156, 242, 253, 0.322);
+  /* color usuario 1*/
+  padding: 5px;
+  min-height: 8vh;
+  border: 2px solid #84CBD4;
+  font-family: 'Nanum Gothic', sans-serif;
+  border-radius: 2%;
+}
+
+#chatScreen {
+  /* estilo */
+  background-color: rgba(156, 242, 253, 0.322);
+  /* color usuario 1*/
   padding: 10%;
   border: 2px solid #84CBD4;
   font-family: 'Nanum Gothic', sans-serif;
   border-radius: 2%;
-  margin-right: 5%;
-  margin-left: 5%;
-}
-#chatScreen{/* estilo */
-  background-color: rgba(156, 242, 253, 0.322); /* color usuario 1*/
-  padding: 10%;
-  border: 2px solid #84CBD4;
-  font-family: 'Nanum Gothic', sans-serif;
-  border-radius: 2%;
-  margin-right: 5%;
-  margin-left: 5%;
   margin-top: 5%;
+  overflow: scroll;
+  min-height: 30vh;
+  max-height: 50vh;
 }
-#chatImput{/* estilo donde va escrito el mensaje*/
+
+#chatImput {
+  /* estilo donde va escrito el mensaje*/
   background-color: white;
   margin-top: 10%;
   font-family: 'Nanum Gothic', sans-serif;
   border-radius: 2%;
   border: 2px solid rgb(189, 189, 189);
-  margin-left: 5%;
-  margin-right: 5%;
   height: 20%;
 }
-#sendButton{/* estilo boton*/
+
+#sendButton {
+  /* estilo boton*/
   border-radius: 3%;
   color: white;
   background-color: blueviolet;
 }
+
 /* =================================== Estilos post========================================= */
-#postArea{ /* color de fondo*/
+#postInput {
+  width: 80%;
+}
+
+#postArea {
+  /* color de fondo*/
   background-color: rgba(255, 255, 255, 0.24);
   padding: 2%;
 }
-#postInput{ /* input color */
-  background-color:  white;
+
+#postInput {
+  /* input color */
+  background-color: white;
   margin-top: 5%;
   height: 20%;
   margin-left: 2%;
   margin-right: 2%;
 }
-#buttons{ /* banner publicar*/
-  background-color: #84CBD4;
+
+#buttons {
+  /* banner publicar*/
 }
-#postScreen{
+
+#postScreen {
   background-color: rgba(255, 255, 255, 0.815);
 }
-#sendButtonPost{
+
+#sendButtonPost {
   color: white;
   background-color: #84CBD4;
 }
-.card{
+
+.card {
   background-color: #84CBD4
 }
-#post{
+
+#post {
   background-color: rgba(255, 255, 255, 0.815);
 }
-.card-title{
+
+.card-title {
   background-color: rgba(255, 255, 255, 0.24);
   width: 100%;
 }
-.list-group-item{
-  background-color: rgba(156, 242, 253, 0.322); /* color usuario 1*/
+
+.list-group-item {
+  background-color: rgba(156, 242, 253, 0.322);
+  /* color usuario 1*/
   padding: 10%;
   border: 2px solid #84CBD4;
   font-family: 'Nanum Gothic', sans-serif;
@@ -340,48 +431,41 @@ width: 10%;
   margin-top: 5%;
   font-size: 20px;
   color: rgb(89, 132, 138);
- 
 }
+
 .card-text {
- color: rgb(2, 2, 2);
- font-family: 'Nanum Gothic', sans-serif;
- font-size: 13px;
- border-radius: 5px;
- background-color: white;
-
-
+  color: rgb(2, 2, 2);
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 13px;
+  border-radius: 5px;
+  background-color: white;
 }
-.fas{
+
+.fas {
   color: grey;
 }
-img{
+
+img {
   border-radius: px;
 }
 
-
 /*=================================================================Estilo Chat======================================*/
 
-#chatScreen {
-  overflow: scroll;
-  height: 50vh;
-}
-
 .unread {
- color: #84CBD4;
+  color: #84CBD4;
 }
-
 
 /* reunion*/
-.textosreunion{
+
+.textosreunion {
   text-align: center;
   font-size: 14px;
   background-color: white;
 }
-#autorizacion{
-   margin:auto;
-   padding: 10px;
-   background-color: white;
-   text-align: center
-  
-}
 
+#autorizacion {
+  margin: auto;
+  padding: 10px;
+  background-color: white;
+  text-align: center
+}
