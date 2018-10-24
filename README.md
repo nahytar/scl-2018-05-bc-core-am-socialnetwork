@@ -19,6 +19,10 @@ ConectApp es una red social a nivel de curso, para agilizar el proceso de comuni
  Proyectando de ésta manera una red social al servicio de la comunidad escolar.
  Para más información al respecto, puede descargar directamente nuestra aplicacion, en la página web de GitHub: https://github.com/nahytar/scl-2018-05-bc-core-am-socialnetwork.
  App: https://red-social-lab-2018.firebaseapp.com/#.
+ 
+ 
+ ![alt text](https://raw.githubusercontent.com/nahytar/scl-2018-05-bc-core-am-socialnetwork/master/public/img/imagenRedSocial.png)
+ 
 
 
  ## Hipotesis
